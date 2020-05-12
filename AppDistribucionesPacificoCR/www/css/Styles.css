@@ -1,0 +1,82 @@
+﻿/*---------------------------------------------- CONTAINERS CUSTOMIZATION----------------------------------------------------*/
+
+body {
+    background-color: #0CE9B7;
+}
+
+footer {
+    clip-path: polygon(23% 12%, 77% 12%, 100% 100%, 0% 100%);
+    background-color: #F2F2F2;
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+.div-radius {
+    border-radius: 20px;
+    border-style: solid;
+    border: 1.5px solid #ffffff;
+}
+
+.nav-border {
+    -moz-border-radius-bottomright: 20px;
+}
+
+.div-center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loginContainer {
+    margin-top:12%;
+}
+
+.loginContainerRegistroProducto {
+    margin-top: 6%;
+}
+
+/*---------------------------------------------- CUSTOM LOGIN BUTTONS ----------------------------------------------------*/
+
+/*As a replacement for bootstrap buttons*/
+
+.btn-primary {
+    background-color: #0CE9B7 !important;
+    border-color: #FFFFFF !important;
+}
+.btn-primary:hover {
+    background-color: #08bf94 !important;
+    border-color: #FFFFFF !important;
+}
+.btn-primary:active {
+    outline-color: #000000 !important;
+}
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: #08bf94 !important;
+    border-color: #FFFFFF !important;
+} 
+
+/*--------- All color button -------------------*/
+
+.btn-outline-primary {
+    background-color: #FFFFFF !important;
+    border-color: #0CE9B7 !important;
+    
+}
+.btn-outline-primary:hover {
+    background-color: #08bf94 !important;
+    border-color: #ffffff !important;
+}
+.btn-outline-primary:active {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+.btn-outline-primary:visited,
+    .btn-outline-primary:focus {
+        background-color: #000000 !important;
+        border-color: #08bf94 !important;
+        text-emphasis-color: black !important;
+    }
+
+/*--------- Outline color button -------------------*/
