@@ -3,7 +3,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-
     <div class="container col-lg-10 mt-5">
         <div class="justify-content-center text-center">
             <div class="card">
@@ -17,15 +16,16 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <%--Creacion de los item de cada moto registrada en la BD--%>
 
+                    <%--Creacion de los item de cada moto registrada en la BD--%>
+                    
                     <asp:DataList ID="lista" runat="server" RepeatLayout="table"
                         RepeatDirection="Horizontal"
                         RepeatColumns="2"
                         DataSourceID="dataSource"
                         AlternatingItemStyle-Wrap="true"
                         CssClass="table table-responsive-lg"
-                        OnItemCommand="">
+                        >
                         <ItemTemplate>
                             <div class="Card">
                                 <div class="card-header">
@@ -94,7 +94,5 @@
             </div>
         </div>
        </div>
-    
-    
-    
+
 </asp:Content>

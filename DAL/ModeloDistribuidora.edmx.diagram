@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="af78d86c6aa84a55923397a9119a4370" Name="Diagram1">
+        <EntityTypeShape EntityType="ProyectoModel.TblClasificacion" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.TblClientes" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.TblProducto" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.TblProveedor" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.TblUsuario" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.TblCliente_TblProducto" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.TblProveedor_TblProducto" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="ProyectoModel.fk_clasificacion" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.fk_cedula" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.fk_rol" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.fk_codBarra" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.fk_codBarra2" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.fk_cedulaLegal" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
