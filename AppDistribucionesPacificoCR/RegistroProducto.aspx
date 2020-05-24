@@ -86,6 +86,20 @@
                     </div>
                 </div>
             </div>
+
+              <div class="form-group">
+                 <div class="row">
+                    <div class="col-md-2">
+                        <asp:Label Text="Proveedor" runat="server"  />
+                    </div>
+                    <div class="col-md-8">
+                        <asp:DropDownList id="DropProveedor" runat="server" CssClass="form-control"/>
+                    </div>
+                    <div class="cold-md-1">
+                        <asp:RequiredFieldValidator id="requiredDropDown" ErrorMessage="El proveedor a vender el producto es un campo requerido." ControlToValidate="DropProveedor" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
+                    </div>
+                </div>
+            </div>
   
             <%--Holder to show validation messages in required fields--%>
             <div class="form-group">

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CD02D86E-BA41-4D7C-99A0-83258A5A2A8D}</ProjectGuid>
+    <ProjectGuid>{E78B85D5-FF63-4EE4-BBCD-37B567F8F659}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DAL</RootNamespace>
@@ -79,9 +79,6 @@
       <DependentUpon>ModeloDistribuidora.tt</DependentUpon>
     </Compile>
     <Compile Include="TblProveedor.cs">
-      <DependentUpon>ModeloDistribuidora.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TblProveedor_TblProducto.cs">
       <DependentUpon>ModeloDistribuidora.tt</DependentUpon>
     </Compile>
     <Compile Include="TblUsuario.cs">

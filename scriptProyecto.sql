@@ -50,10 +50,13 @@ go
 
 create table [TblProducto](
 codBarra varchar (50)primary key not null,
+cedulaLegal varchar(50) not null
+CONSTRAINT fk_cedulaLegal FOREIGN KEY (cedulaLegal) REFERENCES TblProveedor (cedulaLegal),
 descuento decimal (18,8) not null,
 unidadMedida varchar(50) not null,
 foto varchar(300) not null,
 estado varchar(50) not null default 'D',
+precioVenta decimal (18,2) not null,
 idClasificacion int not null
 CONSTRAINT fk_clasificacion FOREIGN KEY (idClasificacion) REFERENCES TblClasificacion (idClasificacion))
 go 
@@ -67,14 +70,6 @@ email varchar(50) not null,
 direccionExacta varchar(50)not null)
 go
 
---Proveedor - Producto
-create table [TblProveedor_TblProducto](
-precioVenta decimal(18,0)not null,
-codBarra varchar (50) not null
-CONSTRAINT fk_codBarra FOREIGN KEY (codBarra) REFERENCES TblProducto (codBarra),
-cedulaLegal varchar(50)not null
-CONSTRAINT fk_cedulaLegal FOREIGN KEY (cedulaLegal) REFERENCES TblProveedor (cedulaLegal))
-go
 
 --Cliente - Producto
 create table [TblCliente_TblProducto](
@@ -84,3 +79,12 @@ CONSTRAINT fk_codBarra2 FOREIGN KEY (codBarra) REFERENCES TblProducto (codBarra)
 cedula varchar(50)not null
 CONSTRAINT fk_cedula FOREIGN KEY (cedula) REFERENCES TblClientes (cedula))
 go
+
+select * from TblProducto
+go
+
+ALTER TABLE TblProducto
+ADD CONSTRAINT fk_clasificacion  FOREIGN KEY (idClasificacion)
+REFERENCES TblClasificacion (idClasificacion)
+go
+      

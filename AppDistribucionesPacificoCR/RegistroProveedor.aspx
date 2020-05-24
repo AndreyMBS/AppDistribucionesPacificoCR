@@ -136,7 +136,7 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-12">
-                        <asp:Button ID="btnRegistro" CssClass="btn btn-primary" Text="Registrar Proveedor"  runat="server" />
+                        <asp:Button ID="btnRegistro" CssClass="btn btn-primary" OnClick="btnRegistro_Click" Text="Registrar Proveedor" runat="server"/>
                     </div>
                 </div>
             </div>

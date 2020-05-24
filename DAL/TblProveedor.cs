@@ -17,7 +17,7 @@ namespace DAL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TblProveedor()
         {
-            this.TblProveedor_TblProducto = new HashSet<TblProveedor_TblProducto>();
+            this.TblProducto = new HashSet<TblProducto>();
         }
     
         public string cedulaLegal { get; set; }
@@ -27,6 +27,6 @@ namespace DAL
         public string direccionExacta { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TblProveedor_TblProducto> TblProveedor_TblProducto { get; set; }
+        public virtual ICollection<TblProducto> TblProducto { get; set; }
     }
 }

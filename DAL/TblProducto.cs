@@ -17,7 +17,6 @@ namespace DAL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TblProducto()
         {
-            this.TblProveedor_TblProducto = new HashSet<TblProveedor_TblProducto>();
             this.TblCliente_TblProducto = new HashSet<TblCliente_TblProducto>();
         }
     
@@ -27,11 +26,12 @@ namespace DAL
         public string foto { get; set; }
         public string estado { get; set; }
         public int idClasificacion { get; set; }
+        public string cedulaLegal { get; set; }
+        public decimal precioVenta { get; set; }
     
-        public virtual TblClasificacion TblClasificacion { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TblProveedor_TblProducto> TblProveedor_TblProducto { get; set; }
+        public virtual TblProveedor TblProveedor { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TblCliente_TblProducto> TblCliente_TblProducto { get; set; }
+        public virtual TblClasificacion TblClasificacion { get; set; }
     }
 }

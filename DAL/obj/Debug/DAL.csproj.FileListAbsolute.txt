@@ -1,0 +1,11 @@
+C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\DAL\bin\Debug\DAL.dll.config
+C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\DAL\bin\Debug\DAL.dll
+C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\DAL\bin\Debug\DAL.pdb
+C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\DAL\bin\Debug\EntityFramework.dll
+C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\DAL\bin\Debug\EntityFramework.xml
+C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\DAL\obj\Debug\DAL.dll
+C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\DAL\obj\Debug\DAL.pdb

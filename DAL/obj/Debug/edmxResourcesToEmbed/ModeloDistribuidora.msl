@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProyectoModelStoreContainer" CdmEntityContainer="ProyectoEntities">
+    <EntitySetMapping Name="TblClasificacion">
+      <EntityTypeMapping TypeName="ProyectoModel.TblClasificacion">
+        <MappingFragment StoreEntitySet="TblClasificacion">
+          <ScalarProperty Name="idClasificacion" ColumnName="idClasificacion" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblClientes">
+      <EntityTypeMapping TypeName="ProyectoModel.TblClientes">
+        <MappingFragment StoreEntitySet="TblClientes">
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="nombreUsuario" ColumnName="nombreUsuario" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblProducto">
+      <EntityTypeMapping TypeName="ProyectoModel.TblProducto">
+        <MappingFragment StoreEntitySet="TblProducto">
+          <ScalarProperty Name="codBarra" ColumnName="codBarra" />
+          <ScalarProperty Name="descuento" ColumnName="descuento" />
+          <ScalarProperty Name="unidadMedida" ColumnName="unidadMedida" />
+          <ScalarProperty Name="foto" ColumnName="foto" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="idClasificacion" ColumnName="idClasificacion" />
+          <ScalarProperty Name="cedulaLegal" ColumnName="cedulaLegal" />
+          <ScalarProperty Name="precioVenta" ColumnName="precioVenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblProveedor">
+      <EntityTypeMapping TypeName="ProyectoModel.TblProveedor">
+        <MappingFragment StoreEntitySet="TblProveedor">
+          <ScalarProperty Name="cedulaLegal" ColumnName="cedulaLegal" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="direccionExacta" ColumnName="direccionExacta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblUsuario">
+      <EntityTypeMapping TypeName="ProyectoModel.TblUsuario">
+        <MappingFragment StoreEntitySet="TblUsuario">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+          <ScalarProperty Name="rol" ColumnName="rol" />
+          <ScalarProperty Name="nombreUsuario" ColumnName="nombreUsuario" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblCliente_TblProducto">
+      <EntityTypeMapping TypeName="ProyectoModel.TblCliente_TblProducto">
+        <MappingFragment StoreEntitySet="TblCliente_TblProducto">
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="codBarra" ColumnName="codBarra" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

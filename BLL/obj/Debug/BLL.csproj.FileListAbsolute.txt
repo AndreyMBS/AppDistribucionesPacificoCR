@@ -1,5 +1,5 @@
 C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\BLL\bin\Debug\BLL.dll
 C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\BLL\bin\Debug\BLL.pdb
-C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
 C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\BLL\obj\Debug\BLL.dll
 C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\BLL\obj\Debug\BLL.pdb
+C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
