@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="CatalogoProductos.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="ListaUsuarios.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="RegistroProducto.aspx" />
     <Content Include="RegistroUsuarios.aspx" />
@@ -92,6 +93,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListaUsuarios.aspx.cs">
+      <DependentUpon>ListaUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaUsuarios.aspx.designer.cs">
+      <DependentUpon>ListaUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>

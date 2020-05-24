@@ -26,7 +26,7 @@
                         <asp:TextBox ID="txtUsuario" CssClass="form-control" MaxLenght="80" runat="server" />  
                     </div>
                     <div class="col-md-1"> 
-                        <asp:RequiredFieldValidator id="requiredTxtUsuario" ErrorMessage="El usaurio es un campo requerido" ControlToValidate="txtUsuario" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator id="requiredTxtUsuario" ErrorMessage="El usuario es un campo requerido" ControlToValidate="txtUsuario" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
                     </div>
                 </div>
             </div>
