@@ -80,6 +80,7 @@
     <Content Include="Default.aspx" />
     <Content Include="ListaUsuarios.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="RegistroCliente.aspx" />
     <Content Include="RegistroProducto.aspx" />
     <Content Include="RegistroProveedor.aspx" />
     <Content Include="RegistroUsuarios.aspx" />
@@ -126,6 +127,13 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RegistroCliente.aspx.cs">
+      <DependentUpon>RegistroCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroCliente.aspx.designer.cs">
+      <DependentUpon>RegistroCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegistroProducto.aspx.cs">
       <DependentUpon>RegistroProducto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -159,6 +167,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="CatalogoProductos\" />
     <Folder Include="www\css\img\" />
   </ItemGroup>
   <ItemGroup>

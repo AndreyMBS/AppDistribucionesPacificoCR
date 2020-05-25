@@ -20,20 +20,6 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-2">
-                        <asp:Label Text="Categoría" runat="server" style="color:white"/>
-                    </div>
-                    <div class="col-md-8">
-                        <asp:TextBox ID="txtCategoria" CssClass="form-control" MaxLenght="80" runat="server" />  
-                    </div>
-                    <div class="col-md-1"> 
-                        <asp:RequiredFieldValidator id="requiredTxtCategoria" ErrorMessage="La categoría es un campo requerido" ControlToValidate="txtCategoria" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-md-2">
                         <asp:Label Text="Marca" runat="server" style="color:white"/>
                     </div>
                     <div class="col-md-8">
@@ -50,11 +36,16 @@
                     <div class="col-md-2">
                         <asp:Label Text="Unidad de medida" runat="server" style="color:white"/>
                     </div>
-                    <div class="col-md-8">
-                        <asp:TextBox id="txtMedida" CssClass="form-control" MaxLenght="80" runat="server" />  
+                    <div class="col-md-8" >
+                        <asp:DropDownList CssClass="form-control" ID="DropUnidad" class="col-md-12" runat="server">
+                            <asp:ListItem Text="Selecciona una unidad de medida" />
+                            <asp:ListItem Text="Unidad" />
+                            <asp:ListItem Text="Peso" />
+                            <asp:ListItem Text="Volumen" />
+                        </asp:DropDownList>  
                     </div>
                     <div class="col-md-1"> 
-                        <asp:RequiredFieldValidator id="requiredTxtMedida" ErrorMessage="La medida es un campo requerido" ControlToValidate="txtMedida" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator id="requiredDropUnidad" ErrorMessage="La medida es un campo requerido" ControlToValidate="DropUnidad" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
                     </div>
                 </div>
             </div>
@@ -68,7 +59,7 @@
                         <asp:TextBox id="txtPrecio" CssClass="form-control" MaxLenght="80" runat="server" />  
                     </div>
                     <div class="col-md-1"> 
-                        <asp:RequiredFieldValidator id="RequiredTxtPrecio" ErrorMessage="El precio es un campo requerido" ControlToValidate="txtMedida" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator id="RequiredTxtPrecio" ErrorMessage="El precio es un campo requerido" ControlToValidate="txtPrecio" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
                     </div>
                 </div>
             </div>
@@ -93,14 +84,43 @@
                         <asp:Label Text="Proveedor" runat="server"  />
                     </div>
                     <div class="col-md-8">
-                        <asp:DropDownList id="DropProveedor" runat="server" CssClass="form-control"/>
+                        <asp:DropDownList ID="DropProveedor" DataSourceID="dataSourceProducto" runat="server" CssClass="form-control" DataTextField="nombreCompleto" DataValueField="cedulaLegal">
+                            <asp:ListItem Text="Seleccione un proveedor" Value="0" Selected="false" />
+                        </asp:DropDownList>
                     </div>
                     <div class="cold-md-1">
-                        <asp:RequiredFieldValidator id="requiredDropDown" ErrorMessage="El proveedor a vender el producto es un campo requerido." ControlToValidate="DropProveedor" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator id="requiredDropProveedor" ErrorMessage="El proveedor a vender el producto es un campo requerido." ControlToValidate="DropProveedor" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
                     </div>
                 </div>
             </div>
-  
+
+            <div class="form-group">
+                 <div class="row">
+                    <div class="col-md-2">
+                        <asp:Label Text="Categoria" runat="server"  />
+                    </div>
+                    <div class="col-md-8">
+                        <asp:DropDownList ID="DropClasificacion" DataSourceID="dataSourceClasificacion" runat="server" CssClass="form-control" DataTextField="tipo" DataValueField="idClasificacion">
+                            <asp:ListItem Text="Seleccione una clasificación" Value="0" Selected="false" />
+                        </asp:DropDownList>
+                    </div>
+                    <div class="cold-md-1">
+                        <asp:RequiredFieldValidator id="RequiredDropClasificacion" ErrorMessage="La clasificación del producto es requerida." ControlToValidate="DropClasificacion" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-2">
+                        <asp:Label Text="Subir foto" style="color:white;" runat="server" />
+                    </div>
+                    <div class="col-md-10 text-left">
+                        <asp:FileUpload ID="fileUpload" style="color:white;"  runat="server" BorderStyle="None" Font-Bold="true" />
+                    </div>
+                </div>
+            </div>
+
             <%--Holder to show validation messages in required fields--%>
             <div class="form-group">
                 <div class="row">
@@ -114,13 +134,17 @@
 
             <div class="form-group ">
                 <div class="row">
-                    <div class="col-md-12">
-                        <asp:Button id="btnRegistrarCompra" CssClass="btn btn-light barraNavegacion" Text="Registrar producto" runat="server" style="color:#000000" />
+                    <div class="col-md-12"> 
+                        <asp:Button id="btnRegistrarProducto" CssClass="btn btn-light barraNavegacion" OnClick="btnRegistrarProducto_Click" Text="Registrar producto" runat="server" style="color:#000000" />
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
+
+    <asp:SqlDataSource ID="dataSourceProducto" runat="server" ConnectionString='<%$ ConnectionStrings:ProyectoConnectionString %>' SelectCommand="SELECT [cedulaLegal], [nombreCompleto] FROM [TblProveedor]" />    
+    <asp:SqlDataSource ID="dataSourceClasificacion" runat="server" ConnectionString='<%$ ConnectionStrings:ProyectoConnectionString %>' SelectCommand="SELECT [idClasificacion], [tipo] FROM [TblClasificacion]" />    
+
 
 </asp:Content>

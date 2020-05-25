@@ -12,8 +12,8 @@
           <Property Name="idClasificacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="tipo" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'Proyecto.dbo.TblCliente_TblProducto' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Proyecto.dbo.TblCliente_TblProducto' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="TblCliente_TblProducto">
           <Key>
             <PropertyRef Name="cantidad" />
@@ -41,13 +41,12 @@ advertencia 6002: La tabla o vista 'Proyecto.dbo.TblCliente_TblProducto' no tien
             <PropertyRef Name="codBarra" />
           </Key>
           <Property Name="codBarra" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="descuento" Type="decimal" Precision="18" Scale="8" Nullable="false" />
+          <Property Name="cedulaLegal" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="unidadMedida" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="foto" Type="varchar" MaxLength="300" Nullable="false" />
           <Property Name="estado" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="idClasificacion" Type="int" Nullable="false" />
-          <Property Name="cedulaLegal" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="precioVenta" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="idClasificacion" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="TblProveedor">
           <Key>
@@ -189,22 +188,6 @@ advertencia 6002: La tabla o vista 'Proyecto.dbo.TblCliente_TblProducto' no tien
           <NavigationProperty Name="TblCliente_TblProducto" Relationship="Self.fk_cedula" FromRole="TblClientes" ToRole="TblCliente_TblProducto" />
           <NavigationProperty Name="TblUsuario" Relationship="Self.fk_rol" FromRole="TblClientes" ToRole="TblUsuario" />
         </EntityType>
-        <EntityType Name="TblProducto">
-          <Key>
-            <PropertyRef Name="codBarra" />
-          </Key>
-          <Property Name="codBarra" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="descuento" Type="Decimal" Precision="18" Scale="8" Nullable="false" />
-          <Property Name="unidadMedida" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="foto" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="idClasificacion" Type="Int32" Nullable="false" />
-          <Property Name="cedulaLegal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="precioVenta" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
-          <NavigationProperty Name="TblProveedor" Relationship="Self.fk_cedulaLegal" FromRole="TblProducto" ToRole="TblProveedor" />
-          <NavigationProperty Name="TblCliente_TblProducto" Relationship="Self.fk_codBarra2" FromRole="TblProducto" ToRole="TblCliente_TblProducto" />
-          <NavigationProperty Name="TblClasificacion" Relationship="ProyectoModel.fk_clasificacion" FromRole="TblProducto" ToRole="TblClasificacion" />
-        </EntityType>
         <EntityType Name="TblProveedor">
           <Key>
             <PropertyRef Name="cedulaLegal" />
@@ -214,7 +197,7 @@ advertencia 6002: La tabla o vista 'Proyecto.dbo.TblCliente_TblProducto' no tien
           <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="direccionExacta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="TblProducto" Relationship="Self.fk_cedulaLegal" FromRole="TblProveedor" ToRole="TblProducto" />
+          <NavigationProperty Name="TblProducto" Relationship="ProyectoModel.fk_cedulaLegal" FromRole="TblProveedor" ToRole="TblProducto" />
         </EntityType>
         <EntityType Name="TblUsuario">
           <Key>
@@ -237,7 +220,7 @@ advertencia 6002: La tabla o vista 'Proyecto.dbo.TblCliente_TblProducto' no tien
           <Property Name="codBarra" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="cedula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="TblClientes" Relationship="Self.fk_cedula" FromRole="TblCliente_TblProducto" ToRole="TblClientes" />
-          <NavigationProperty Name="TblProducto" Relationship="Self.fk_codBarra2" FromRole="TblCliente_TblProducto" ToRole="TblProducto" />
+          <NavigationProperty Name="TblProducto" Relationship="ProyectoModel.fk_codBarra2" FromRole="TblCliente_TblProducto" ToRole="TblProducto" />
         </EntityType>
         <Association Name="fk_cedula">
           <End Role="TblClientes" Type="Self.TblClientes" Multiplicity="1" />
@@ -263,34 +246,9 @@ advertencia 6002: La tabla o vista 'Proyecto.dbo.TblCliente_TblProducto' no tien
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_cedulaLegal">
-          <End Role="TblProveedor" Type="Self.TblProveedor" Multiplicity="1" />
-          <End Role="TblProducto" Type="Self.TblProducto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TblProveedor">
-              <PropertyRef Name="cedulaLegal" />
-            </Principal>
-            <Dependent Role="TblProducto">
-              <PropertyRef Name="cedulaLegal" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="fk_codBarra2">
-          <End Role="TblProducto" Type="Self.TblProducto" Multiplicity="1" />
-          <End Role="TblCliente_TblProducto" Type="Self.TblCliente_TblProducto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TblProducto">
-              <PropertyRef Name="codBarra" />
-            </Principal>
-            <Dependent Role="TblCliente_TblProducto">
-              <PropertyRef Name="codBarra" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="ProyectoEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TblClasificacion" EntityType="Self.TblClasificacion" />
           <EntitySet Name="TblClientes" EntityType="Self.TblClientes" />
-          <EntitySet Name="TblProducto" EntityType="Self.TblProducto" />
           <EntitySet Name="TblProveedor" EntityType="Self.TblProveedor" />
           <EntitySet Name="TblUsuario" EntityType="Self.TblUsuario" />
           <EntitySet Name="TblCliente_TblProducto" EntityType="Self.TblCliente_TblProducto" />
@@ -302,19 +260,35 @@ advertencia 6002: La tabla o vista 'Proyecto.dbo.TblCliente_TblProducto' no tien
             <End Role="TblUsuario" EntitySet="TblUsuario" />
             <End Role="TblClientes" EntitySet="TblClientes" />
           </AssociationSet>
-          <AssociationSet Name="fk_cedulaLegal" Association="Self.fk_cedulaLegal">
-            <End Role="TblProveedor" EntitySet="TblProveedor" />
-            <End Role="TblProducto" EntitySet="TblProducto" />
-          </AssociationSet>
-          <AssociationSet Name="fk_codBarra2" Association="Self.fk_codBarra2">
-            <End Role="TblProducto" EntitySet="TblProducto" />
-            <End Role="TblCliente_TblProducto" EntitySet="TblCliente_TblProducto" />
-          </AssociationSet>
+          <EntitySet Name="TblProducto" EntityType="ProyectoModel.TblProducto" />
           <AssociationSet Name="fk_clasificacion" Association="ProyectoModel.fk_clasificacion">
             <End Role="TblClasificacion" EntitySet="TblClasificacion" />
             <End Role="TblProducto" EntitySet="TblProducto" />
           </AssociationSet>
-        </EntityContainer>
+          <AssociationSet Name="fk_cedulaLegal" Association="ProyectoModel.fk_cedulaLegal">
+            <End Role="TblProveedor" EntitySet="TblProveedor" />
+            <End Role="TblProducto" EntitySet="TblProducto" />
+          </AssociationSet>
+          <AssociationSet Name="fk_codBarra2" Association="ProyectoModel.fk_codBarra2">
+            <End Role="TblProducto" EntitySet="TblProducto" />
+            <End Role="TblCliente_TblProducto" EntitySet="TblCliente_TblProducto" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="TblProducto">
+          <Key>
+            <PropertyRef Name="codBarra" />
+          </Key>
+          <Property Name="codBarra" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cedulaLegal" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="unidadMedida" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="foto" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="estado" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="precioVenta" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="idClasificacion" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TblClasificacion" Relationship="ProyectoModel.fk_clasificacion" FromRole="TblProducto" ToRole="TblClasificacion" />
+          <NavigationProperty Name="TblProveedor" Relationship="ProyectoModel.fk_cedulaLegal" FromRole="TblProducto" ToRole="TblProveedor" />
+          <NavigationProperty Name="TblCliente_TblProducto" Relationship="ProyectoModel.fk_codBarra2" FromRole="TblProducto" ToRole="TblCliente_TblProducto" />
+        </EntityType>
         <Association Name="fk_clasificacion">
           <End Type="ProyectoModel.TblClasificacion" Role="TblClasificacion" Multiplicity="1" />
           <End Type="ProyectoModel.TblProducto" Role="TblProducto" Multiplicity="*" />
@@ -324,6 +298,30 @@ advertencia 6002: La tabla o vista 'Proyecto.dbo.TblCliente_TblProducto' no tien
             </Principal>
             <Dependent Role="TblProducto">
               <PropertyRef Name="idClasificacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_cedulaLegal">
+          <End Type="ProyectoModel.TblProveedor" Role="TblProveedor" Multiplicity="1" />
+          <End Type="ProyectoModel.TblProducto" Role="TblProducto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblProveedor">
+              <PropertyRef Name="cedulaLegal" />
+            </Principal>
+            <Dependent Role="TblProducto">
+              <PropertyRef Name="cedulaLegal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_codBarra2">
+          <End Type="ProyectoModel.TblProducto" Role="TblProducto" Multiplicity="1" />
+          <End Type="ProyectoModel.TblCliente_TblProducto" Role="TblCliente_TblProducto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblProducto">
+              <PropertyRef Name="codBarra" />
+            </Principal>
+            <Dependent Role="TblCliente_TblProducto">
+              <PropertyRef Name="codBarra" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -351,20 +349,6 @@ advertencia 6002: La tabla o vista 'Proyecto.dbo.TblCliente_TblProducto' no tien
                 <ScalarProperty Name="direccion" ColumnName="direccion" />
                 <ScalarProperty Name="nombreUsuario" ColumnName="nombreUsuario" />
                 <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TblProducto">
-            <EntityTypeMapping TypeName="ProyectoModel.TblProducto">
-              <MappingFragment StoreEntitySet="TblProducto">
-                <ScalarProperty Name="codBarra" ColumnName="codBarra" />
-                <ScalarProperty Name="descuento" ColumnName="descuento" />
-                <ScalarProperty Name="unidadMedida" ColumnName="unidadMedida" />
-                <ScalarProperty Name="foto" ColumnName="foto" />
-                <ScalarProperty Name="estado" ColumnName="estado" />
-                <ScalarProperty Name="idClasificacion" ColumnName="idClasificacion" />
-                <ScalarProperty Name="cedulaLegal" ColumnName="cedulaLegal" />
-                <ScalarProperty Name="precioVenta" ColumnName="precioVenta" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -396,6 +380,19 @@ advertencia 6002: La tabla o vista 'Proyecto.dbo.TblCliente_TblProducto' no tien
                 <ScalarProperty Name="cantidad" ColumnName="cantidad" />
                 <ScalarProperty Name="codBarra" ColumnName="codBarra" />
                 <ScalarProperty Name="cedula" ColumnName="cedula" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblProducto">
+            <EntityTypeMapping TypeName="ProyectoModel.TblProducto">
+              <MappingFragment StoreEntitySet="TblProducto">
+                <ScalarProperty Name="idClasificacion" ColumnName="idClasificacion" />
+                <ScalarProperty Name="precioVenta" ColumnName="precioVenta" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="foto" ColumnName="foto" />
+                <ScalarProperty Name="unidadMedida" ColumnName="unidadMedida" />
+                <ScalarProperty Name="cedulaLegal" ColumnName="cedulaLegal" />
+                <ScalarProperty Name="codBarra" ColumnName="codBarra" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

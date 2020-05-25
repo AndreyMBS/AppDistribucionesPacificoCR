@@ -9,3 +9,14 @@ C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\DAL\obj\Debu
 C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\DAL\obj\Debug\DAL.dll
 C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\DAL\obj\Debug\DAL.pdb
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\DAL\bin\Debug\DAL.dll.config
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\DAL\bin\Debug\DAL.dll
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\DAL\bin\Debug\DAL.pdb
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\DAL\bin\Debug\EntityFramework.dll
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\DAL\bin\Debug\EntityFramework.xml
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\DAL\obj\Debug\DAL.dll
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\DAL\obj\Debug\DAL.pdb

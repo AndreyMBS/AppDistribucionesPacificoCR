@@ -7,8 +7,8 @@
     <Property Name="idClasificacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="tipo" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'Proyecto.dbo.TblCliente_TblProducto' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Proyecto.dbo.TblCliente_TblProducto' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="TblCliente_TblProducto">
     <Key>
       <PropertyRef Name="cantidad" />
@@ -36,13 +36,12 @@ advertencia 6002: La tabla o vista 'Proyecto.dbo.TblCliente_TblProducto' no tien
       <PropertyRef Name="codBarra" />
     </Key>
     <Property Name="codBarra" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="descuento" Type="decimal" Precision="18" Scale="8" Nullable="false" />
+    <Property Name="cedulaLegal" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="unidadMedida" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="foto" Type="varchar" MaxLength="300" Nullable="false" />
     <Property Name="estado" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="idClasificacion" Type="int" Nullable="false" />
-    <Property Name="cedulaLegal" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="precioVenta" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="idClasificacion" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="TblProveedor">
     <Key>

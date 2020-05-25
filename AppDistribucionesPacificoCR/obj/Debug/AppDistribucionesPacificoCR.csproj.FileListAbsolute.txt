@@ -181,3 +181,12 @@ C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\AppDistribuc
 C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\AppDistribucionesPacificoCR\bin\DAL.dll.config
 C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\AppDistribucionesPacificoCR\bin\EntityFramework.xml
 C:\Users\MSI\Desktop\Proyecto Lenguajes\AppDistribucionesPacificoCR\AppDistribucionesPacificoCR\bin\EntityFramework.SqlServer.xml
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\AppDistribucionesPacificoCR\bin\BLL.dll
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\AppDistribucionesPacificoCR\bin\DAL.dll
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\AppDistribucionesPacificoCR\bin\EntityFramework.dll
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\AppDistribucionesPacificoCR\bin\EntityFramework.SqlServer.dll
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\AppDistribucionesPacificoCR\bin\BLL.pdb
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\AppDistribucionesPacificoCR\bin\DAL.pdb
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\AppDistribucionesPacificoCR\bin\DAL.dll.config
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\AppDistribucionesPacificoCR\bin\EntityFramework.xml
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\AppDistribucionesPacificoCR\bin\EntityFramework.SqlServer.xml

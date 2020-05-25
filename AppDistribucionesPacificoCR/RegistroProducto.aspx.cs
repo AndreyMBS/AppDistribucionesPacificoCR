@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,40 +13,76 @@ namespace AppDistribucionesPacificoCR
 {
     public partial class RegistroProducto1 : System.Web.UI.Page
     {
+        private Producto producto;
         private ProyectoEntities entidades;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             this.entidades = new ProyectoEntities();
-
-            if (!IsPostBack)
-            {
-                //IniciarLlenadoDropDown();
-            }
         }//Fin de Page_Load.
 
-        private void IniciarLlenadoDropDown()
+        protected void btnRegistrarProducto_Click(object sender, EventArgs e)
         {
-            DropProveedor.DataSource = Consultar("SELECT nombre FROM tblProveedor");
-            DropProveedor.DataTextField = "nombre";
-            DropProveedor.DataValueField = "nombre";
-            DropProveedor.DataBind();
+            this.producto = new Producto();
 
-            DropProveedor.Items.Insert(0, new ListItem("[Seleccione un proveedor]", "0"));
-        }//Fin de método IniciarLlenadoDropDown.
+            this.producto.codBarra = this.txtCodigoBarra.Text.Trim();
+            this.producto.cedulaLegal = this.DropProveedor.SelectedValue;
+            this.producto.unidadMedida = this.DropUnidad.SelectedValue;
+            this.producto.foto = this.producto.codBarra + "_" + this.fileUpload.FileName;
+            this.producto.estado = "Disponible";
+            this.producto.precioVenta = int.Parse(this.txtPrecio.Text);
+            this.producto.idClasificacion = int.Parse(this.DropClasificacion.SelectedValue);
 
-        public DataSet Consultar(string strSQL)
+            if (this.fileUpload.HasFile)
+            {
+                this.subirFoto(this.producto.codBarra, this.fileUpload.PostedFile);
+            }//Fin de if-FileUpload.
+
+            this.registrarProducto(this.producto);
+
+            Response.Redirect("Default.aspx");
+
+        }//Fin de btnRegistrarProducto_Click.
+
+        private void subirFoto(string pCed, HttpPostedFile archivo)
         {
-            string strconn = "data source=YOSHI\\SQLEXPRESS;initial catalog=Proyecto;persist security info=True;user id=userProyecto;password=ucr2020";
-            SqlConection con = new SqlConnection(strconn);
-            con.Open();
-            SqlCommand cmd = new SqlCommand(strSQL, con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            con.Close();
-            return ds;
-        }//Fin de método
+            try
+            {
+                string ruta = Server.MapPath(".") + @"\CatalogoProductos\" + pCed + "_" + archivo.FileName;
 
-    }//Fin de RegistroProducto1 partial class.
-}//Fin de namespace.
+                this.fileUpload.SaveAs(ruta);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        private void registrarProducto(Producto pro)
+        {
+            try 
+            {
+                TblProducto tblProducto = new TblProducto();
+
+                tblProducto.codBarra = pro.codBarra;
+                tblProducto.cedulaLegal = pro.cedulaLegal;
+                tblProducto.unidadMedida = pro.unidadMedida;
+                tblProducto.foto = pro.foto;
+                tblProducto.estado = pro.estado;
+                tblProducto.precioVenta = (decimal)pro.precioVenta;
+                tblProducto.idClasificacion = pro.idClasificacion;
+
+                this.entidades.TblProducto.Add(tblProducto);
+
+                this.entidades.SaveChanges();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+    }
+}
