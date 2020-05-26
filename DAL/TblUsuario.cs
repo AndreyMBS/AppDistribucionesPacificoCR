@@ -21,10 +21,10 @@ namespace DAL
         }
     
         public int idUsuario { get; set; }
-        public string fechaRegistro { get; set; }
         public string rol { get; set; }
         public string nombreUsuario { get; set; }
         public string pass { get; set; }
+        public Nullable<System.DateTime> fechaRegistro { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TblClientes> TblClientes { get; set; }

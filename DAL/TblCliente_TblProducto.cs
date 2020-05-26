@@ -18,7 +18,7 @@ namespace DAL
         public string codBarra { get; set; }
         public string cedula { get; set; }
     
-        public virtual TblClientes TblClientes { get; set; }
         public virtual TblProducto TblProducto { get; set; }
+        public virtual TblClientes TblClientes { get; set; }
     }
 }

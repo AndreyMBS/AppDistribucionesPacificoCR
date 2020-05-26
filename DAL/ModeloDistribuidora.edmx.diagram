@@ -6,16 +6,16 @@
     <edmx:Diagrams>
       <Diagram DiagramId="37166e31f90d49eea9418e297b981840" Name="Diagram1">
         <EntityTypeShape EntityType="ProyectoModel.TblClasificacion" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoModel.TblClientes" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="ProyectoModel.TblProveedor" Width="1.5" PointX="3.875" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoModel.TblUsuario" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ProyectoModel.TblCliente_TblProducto" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
-        <AssociationConnector Association="ProyectoModel.fk_cedula" ManuallyRouted="false" />
-        <AssociationConnector Association="ProyectoModel.fk_rol" ManuallyRouted="false" />
         <EntityTypeShape EntityType="ProyectoModel.TblProducto" Width="1.5" PointX="8" PointY="4.625" />
         <AssociationConnector Association="ProyectoModel.fk_clasificacion" />
         <AssociationConnector Association="ProyectoModel.fk_cedulaLegal" />
         <AssociationConnector Association="ProyectoModel.fk_codBarra2" />
+        <EntityTypeShape EntityType="ProyectoModel.TblUsuario" Width="1.5" PointX="0.75" PointY="1.25" />
+        <EntityTypeShape EntityType="ProyectoModel.TblClientes" Width="1.5" PointX="3" PointY="1" />
+        <AssociationConnector Association="ProyectoModel.fk_cedula" />
+        <AssociationConnector Association="ProyectoModel.fk_rol" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

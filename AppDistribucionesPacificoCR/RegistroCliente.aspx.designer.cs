@@ -15,121 +15,130 @@ namespace AppDistribucionesPacificoCR
     {
 
         /// <summary>
-        /// txtMarca control.
+        /// txtNombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMarca;
+        protected global::System.Web.UI.WebControls.TextBox txtNombre;
 
         /// <summary>
-        /// requiredTxtMarca control.
+        /// requiredTxtNombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredTxtMarca;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredTxtNombre;
 
         /// <summary>
-        /// DropUnidad control.
+        /// txtCedula control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropUnidad;
+        protected global::System.Web.UI.WebControls.TextBox txtCedula;
 
         /// <summary>
-        /// requiredDropUnidad control.
+        /// requiredTxtCedula control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredDropUnidad;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredTxtCedula;
 
         /// <summary>
-        /// txtPrecio control.
+        /// txtTelefono control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrecio;
+        protected global::System.Web.UI.WebControls.TextBox txtTelefono;
 
         /// <summary>
-        /// RequiredTxtPrecio control.
+        /// requiredTxtTelefono control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredTxtPrecio;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredTxtTelefono;
 
         /// <summary>
-        /// txtCodigoBarra control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCodigoBarra;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
-        /// requiredTxtCodigoBarra control.
+        /// requiredTxtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredTxtCodigoBarra;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredTxtEmail;
 
         /// <summary>
-        /// DropProveedor control.
+        /// txtDireccion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropProveedor;
+        protected global::System.Web.UI.WebControls.TextBox txtDireccion;
 
         /// <summary>
-        /// requiredDropProveedor control.
+        /// requiredTxtDireccion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredDropProveedor;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredTxtDireccion;
 
         /// <summary>
-        /// DropClasificacion control.
+        /// txtNombreUsuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropClasificacion;
+        protected global::System.Web.UI.WebControls.TextBox txtNombreUsuario;
 
         /// <summary>
-        /// RequiredDropClasificacion control.
+        /// requiredTxtNombreUsuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredDropClasificacion;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredTxtNombreUsuario;
 
         /// <summary>
-        /// fileUpload control.
+        /// txtContrasenaUsuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fileUpload;
+        protected global::System.Web.UI.WebControls.TextBox txtContrasenaUsuario;
+
+        /// <summary>
+        /// requiredTxtContrasenaUsuario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredTxtContrasenaUsuario;
 
         /// <summary>
         /// validaciones control.

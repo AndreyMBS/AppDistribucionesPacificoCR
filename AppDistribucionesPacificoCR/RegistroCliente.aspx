@@ -124,8 +124,8 @@
             <div class="form-group ">
                 <div class="row">
                     <div class="col-md-12"> 
-                        <asp:Button id="btnRegistrarProducto" CssClass="btn btn-light barraNavegacion" Text="Registrar producto" runat="server" style="color:#000000" />
-                    </div>
+                        <asp:Button id="btnRegistrarProducto" CssClass="btn btn-light barraNavegacion" OnClick="btnRegistrarProducto_Click" Text="Registrar cliente" runat="server" style="color:#000000" />
+                     </div>
                 </div>
             </div>
 

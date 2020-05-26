@@ -39,7 +39,7 @@
                         <asp:Label Text="Contraseña" runat="server" style="color:white"/>
                     </div>
                     <div class="col-md-8">
-                        <asp:TextBox id="txtContrasena" CssClass="form-control" MaxLenght="80" runat="server" />  
+                        <asp:TextBox id="txtContrasena" Type="password" CssClass="form-control" MaxLenght="80" runat="server" />  
                     </div>
                     <div class="col-md-1"> 
                         <asp:RequiredFieldValidator id="requiredTxtContrasena" ErrorMessage="La contraseña es un campo requerido" ControlToValidate="txtContrasena" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
@@ -61,7 +61,7 @@
             <div class="form-group ">
                 <div class="row">
                     <div class="col-md-12">
-                        <asp:Button id="btnRegistrarCompra" CssClass="btn btn-light barraNavegacion" Text="Comprar entradas" runat="server" style="color:#000000" />
+                        <asp:Button id="btnIngresar" CssClass="btn btn-light barraNavegacion" OnClick="btnIngresar_Click" Text="Ingresar" runat="server" style="color:#000000" />
                     </div>
                 </div>
             </div>

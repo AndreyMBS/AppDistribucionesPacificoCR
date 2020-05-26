@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    class Usuario
+    public class Usuario
     {
-        public DateTime fechaRegistro { set; get; }
+        public int idUsuario { set; get; }
+
+        public DateTime fechaRegistro { set ; get; }
 
         public String rol { set; get; }
 
-        public String nombreUsuario { set; get; }
+        public String nombreUsuario { set ; get; }
 
         public String pass { set; get; }
     }

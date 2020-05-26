@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    class Cliente
+    public class Cliente
     {
         public string nombreCompleto { set; get; }
 
@@ -20,6 +20,6 @@ namespace BLL
 
         public string nombreUsuario { set; get; }
 
-        public string idRol { set; get; }
+        public int idUsuario { set; get; }
     }
 }

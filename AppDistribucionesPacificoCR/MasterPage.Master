@@ -13,8 +13,6 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
-    
-
 </head>
 <body>
 
@@ -41,9 +39,21 @@
                   </li>
                 </ul>
                  <span class="navbar-text" style="text-align:right;">
-                   <button type="button" class="btn btn-primary" onClick="location.href = 'Login.aspx';">Login</button>
-                    <button class="btn btn-outline-primary" type="button">Registrarse</button>
-                </span>
+                     <div class="container">
+                        <div class="row">
+                            <div class="col-sm">
+                                <asp:LoginName Visible="true" id="loginName" CssClass="dropdown-item nav-link seleccion" FormatString ="Bienvenido, <i><b>{0}</b></i>." runat="server" />
+                            </div>
+                            <div class="col-sm">
+                                <button id="buttonLogin" type="button" class="btn btn-primary" onClick="location.href = 'Login.aspx';"><asp:LoginStatus runat="server" /></button>
+                            </div>
+                            <div class="col-sm">
+                                <button id="buttonRegistrarse" class="btn btn-outline-primary" type="button" Visible="true" runat="server">Registrarse</button>
+                            </div>
+                        </div>
+                    </div>
+                 </span>
+                
               </div>
             </nav>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

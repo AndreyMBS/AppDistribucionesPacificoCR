@@ -9,19 +9,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TblClientes">
-      <EntityTypeMapping TypeName="ProyectoModel.TblClientes">
-        <MappingFragment StoreEntitySet="TblClientes">
-          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
-          <ScalarProperty Name="cedula" ColumnName="cedula" />
-          <ScalarProperty Name="telefono" ColumnName="telefono" />
-          <ScalarProperty Name="email" ColumnName="email" />
-          <ScalarProperty Name="direccion" ColumnName="direccion" />
-          <ScalarProperty Name="nombreUsuario" ColumnName="nombreUsuario" />
-          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="TblProveedor">
       <EntityTypeMapping TypeName="ProyectoModel.TblProveedor">
         <MappingFragment StoreEntitySet="TblProveedor">
@@ -30,17 +17,6 @@
           <ScalarProperty Name="telefono" ColumnName="telefono" />
           <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="direccionExacta" ColumnName="direccionExacta" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TblUsuario">
-      <EntityTypeMapping TypeName="ProyectoModel.TblUsuario">
-        <MappingFragment StoreEntitySet="TblUsuario">
-          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
-          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
-          <ScalarProperty Name="rol" ColumnName="rol" />
-          <ScalarProperty Name="nombreUsuario" ColumnName="nombreUsuario" />
-          <ScalarProperty Name="pass" ColumnName="pass" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -63,6 +39,29 @@
           <ScalarProperty Name="unidadMedida" ColumnName="unidadMedida" />
           <ScalarProperty Name="cedulaLegal" ColumnName="cedulaLegal" />
           <ScalarProperty Name="codBarra" ColumnName="codBarra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblUsuario">
+      <EntityTypeMapping TypeName="ProyectoModel.TblUsuario">
+        <MappingFragment StoreEntitySet="TblUsuario">
+          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="nombreUsuario" ColumnName="nombreUsuario" />
+          <ScalarProperty Name="rol" ColumnName="rol" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblClientes">
+      <EntityTypeMapping TypeName="ProyectoModel.TblClientes">
+        <MappingFragment StoreEntitySet="TblClientes">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
