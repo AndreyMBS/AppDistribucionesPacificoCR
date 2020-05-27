@@ -46,6 +46,9 @@ warning 6002: The table/view 'Proyecto.dbo.TblCliente_TblProducto' does not have
           <Property Name="estado" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="precioVenta" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="idClasificacion" Type="int" Nullable="false" />
+          <Property Name="nombreProducto" Type="varchar" MaxLength="50" />
+          <Property Name="descripcion" Type="varchar" MaxLength="60" />
+          <Property Name="exento" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="TblProveedor">
           <Key>
@@ -193,13 +196,23 @@ warning 6002: The table/view 'Proyecto.dbo.TblCliente_TblProducto' does not have
           <Property Name="cantidad" Type="Int32" Nullable="false" />
           <Property Name="codBarra" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="cedula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="TblProducto" Relationship="ProyectoModel.fk_codBarra2" FromRole="TblCliente_TblProducto" ToRole="TblProducto" />
           <NavigationProperty Name="TblClientes" Relationship="ProyectoModel.fk_cedula" FromRole="TblCliente_TblProducto" ToRole="TblClientes" />
+          <NavigationProperty Name="TblProducto" Relationship="ProyectoModel.fk_codBarra2" FromRole="TblCliente_TblProducto" ToRole="TblProducto" />
         </EntityType>
         <EntityContainer Name="ProyectoEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TblClasificacion" EntityType="Self.TblClasificacion" />
           <EntitySet Name="TblProveedor" EntityType="Self.TblProveedor" />
           <EntitySet Name="TblCliente_TblProducto" EntityType="Self.TblCliente_TblProducto" />
+          <EntitySet Name="TblUsuario" EntityType="ProyectoModel.TblUsuario" />
+          <EntitySet Name="TblClientes" EntityType="ProyectoModel.TblClientes" />
+          <AssociationSet Name="fk_cedula" Association="ProyectoModel.fk_cedula">
+            <End Role="TblClientes" EntitySet="TblClientes" />
+            <End Role="TblCliente_TblProducto" EntitySet="TblCliente_TblProducto" />
+          </AssociationSet>
+          <AssociationSet Name="fk_rol" Association="ProyectoModel.fk_rol">
+            <End Role="TblUsuario" EntitySet="TblUsuario" />
+            <End Role="TblClientes" EntitySet="TblClientes" />
+          </AssociationSet>
           <EntitySet Name="TblProducto" EntityType="ProyectoModel.TblProducto" />
           <AssociationSet Name="fk_clasificacion" Association="ProyectoModel.fk_clasificacion">
             <End Role="TblClasificacion" EntitySet="TblClasificacion" />
@@ -213,68 +226,7 @@ warning 6002: The table/view 'Proyecto.dbo.TblCliente_TblProducto' does not have
             <End Role="TblProducto" EntitySet="TblProducto" />
             <End Role="TblCliente_TblProducto" EntitySet="TblCliente_TblProducto" />
           </AssociationSet>
-          <EntitySet Name="TblUsuario" EntityType="ProyectoModel.TblUsuario" />
-          <EntitySet Name="TblClientes" EntityType="ProyectoModel.TblClientes" />
-          <AssociationSet Name="fk_cedula" Association="ProyectoModel.fk_cedula">
-            <End Role="TblClientes" EntitySet="TblClientes" />
-            <End Role="TblCliente_TblProducto" EntitySet="TblCliente_TblProducto" />
-          </AssociationSet>
-          <AssociationSet Name="fk_rol" Association="ProyectoModel.fk_rol">
-            <End Role="TblUsuario" EntitySet="TblUsuario" />
-            <End Role="TblClientes" EntitySet="TblClientes" />
-          </AssociationSet>
           </EntityContainer>
-        <EntityType Name="TblProducto">
-          <Key>
-            <PropertyRef Name="codBarra" />
-          </Key>
-          <Property Name="codBarra" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="cedulaLegal" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="unidadMedida" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="foto" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
-          <Property Name="estado" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="precioVenta" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="idClasificacion" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="TblClasificacion" Relationship="ProyectoModel.fk_clasificacion" FromRole="TblProducto" ToRole="TblClasificacion" />
-          <NavigationProperty Name="TblProveedor" Relationship="ProyectoModel.fk_cedulaLegal" FromRole="TblProducto" ToRole="TblProveedor" />
-          <NavigationProperty Name="TblCliente_TblProducto" Relationship="ProyectoModel.fk_codBarra2" FromRole="TblProducto" ToRole="TblCliente_TblProducto" />
-        </EntityType>
-        <Association Name="fk_clasificacion">
-          <End Type="ProyectoModel.TblClasificacion" Role="TblClasificacion" Multiplicity="1" />
-          <End Type="ProyectoModel.TblProducto" Role="TblProducto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TblClasificacion">
-              <PropertyRef Name="idClasificacion" />
-            </Principal>
-            <Dependent Role="TblProducto">
-              <PropertyRef Name="idClasificacion" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="fk_cedulaLegal">
-          <End Type="ProyectoModel.TblProveedor" Role="TblProveedor" Multiplicity="1" />
-          <End Type="ProyectoModel.TblProducto" Role="TblProducto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TblProveedor">
-              <PropertyRef Name="cedulaLegal" />
-            </Principal>
-            <Dependent Role="TblProducto">
-              <PropertyRef Name="cedulaLegal" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="fk_codBarra2">
-          <End Type="ProyectoModel.TblProducto" Role="TblProducto" Multiplicity="1" />
-          <End Type="ProyectoModel.TblCliente_TblProducto" Role="TblCliente_TblProducto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TblProducto">
-              <PropertyRef Name="codBarra" />
-            </Principal>
-            <Dependent Role="TblCliente_TblProducto">
-              <PropertyRef Name="codBarra" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="TblUsuario">
           <Key>
             <PropertyRef Name="idUsuario" />
@@ -323,6 +275,60 @@ warning 6002: The table/view 'Proyecto.dbo.TblCliente_TblProducto' does not have
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="TblProducto">
+          <Key>
+            <PropertyRef Name="codBarra" />
+          </Key>
+          <Property Name="codBarra" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cedulaLegal" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="unidadMedida" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="foto" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="estado" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="precioVenta" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="idClasificacion" Type="Int32" Nullable="false" />
+          <Property Name="nombreProducto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="exento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TblClasificacion" Relationship="ProyectoModel.fk_clasificacion" FromRole="TblProducto" ToRole="TblClasificacion" />
+          <NavigationProperty Name="TblProveedor" Relationship="ProyectoModel.fk_cedulaLegal" FromRole="TblProducto" ToRole="TblProveedor" />
+          <NavigationProperty Name="TblCliente_TblProducto" Relationship="ProyectoModel.fk_codBarra2" FromRole="TblProducto" ToRole="TblCliente_TblProducto" />
+        </EntityType>
+        <Association Name="fk_clasificacion">
+          <End Type="ProyectoModel.TblClasificacion" Role="TblClasificacion" Multiplicity="1" />
+          <End Type="ProyectoModel.TblProducto" Role="TblProducto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblClasificacion">
+              <PropertyRef Name="idClasificacion" />
+            </Principal>
+            <Dependent Role="TblProducto">
+              <PropertyRef Name="idClasificacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_cedulaLegal">
+          <End Type="ProyectoModel.TblProveedor" Role="TblProveedor" Multiplicity="1" />
+          <End Type="ProyectoModel.TblProducto" Role="TblProducto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblProveedor">
+              <PropertyRef Name="cedulaLegal" />
+            </Principal>
+            <Dependent Role="TblProducto">
+              <PropertyRef Name="cedulaLegal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_codBarra2">
+          <End Type="ProyectoModel.TblProducto" Role="TblProducto" Multiplicity="1" />
+          <End Type="ProyectoModel.TblCliente_TblProducto" Role="TblCliente_TblProducto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblProducto">
+              <PropertyRef Name="codBarra" />
+            </Principal>
+            <Dependent Role="TblCliente_TblProducto">
+              <PropertyRef Name="codBarra" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -357,19 +363,6 @@ warning 6002: The table/view 'Proyecto.dbo.TblCliente_TblProducto' does not have
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="TblProducto">
-            <EntityTypeMapping TypeName="ProyectoModel.TblProducto">
-              <MappingFragment StoreEntitySet="TblProducto">
-                <ScalarProperty Name="idClasificacion" ColumnName="idClasificacion" />
-                <ScalarProperty Name="precioVenta" ColumnName="precioVenta" />
-                <ScalarProperty Name="estado" ColumnName="estado" />
-                <ScalarProperty Name="foto" ColumnName="foto" />
-                <ScalarProperty Name="unidadMedida" ColumnName="unidadMedida" />
-                <ScalarProperty Name="cedulaLegal" ColumnName="cedulaLegal" />
-                <ScalarProperty Name="codBarra" ColumnName="codBarra" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="TblUsuario">
             <EntityTypeMapping TypeName="ProyectoModel.TblUsuario">
               <MappingFragment StoreEntitySet="TblUsuario">
@@ -390,6 +383,22 @@ warning 6002: The table/view 'Proyecto.dbo.TblCliente_TblProducto' does not have
                 <ScalarProperty Name="telefono" ColumnName="telefono" />
                 <ScalarProperty Name="cedula" ColumnName="cedula" />
                 <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblProducto">
+            <EntityTypeMapping TypeName="ProyectoModel.TblProducto">
+              <MappingFragment StoreEntitySet="TblProducto">
+                <ScalarProperty Name="exento" ColumnName="exento" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="nombreProducto" ColumnName="nombreProducto" />
+                <ScalarProperty Name="idClasificacion" ColumnName="idClasificacion" />
+                <ScalarProperty Name="precioVenta" ColumnName="precioVenta" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="foto" ColumnName="foto" />
+                <ScalarProperty Name="unidadMedida" ColumnName="unidadMedida" />
+                <ScalarProperty Name="cedulaLegal" ColumnName="cedulaLegal" />
+                <ScalarProperty Name="codBarra" ColumnName="codBarra" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

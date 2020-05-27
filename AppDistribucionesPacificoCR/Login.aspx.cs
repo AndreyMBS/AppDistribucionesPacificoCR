@@ -30,6 +30,7 @@ namespace AppDistribucionesPacificoCR
                     FormsAuthentication.SetAuthCookie(this.txtUsuario.Text.Trim(), false);
 
                     //se redirreciona el usuario al formulario default
+                    
                     Response.Redirect("Default.aspx");
                 }
                 else

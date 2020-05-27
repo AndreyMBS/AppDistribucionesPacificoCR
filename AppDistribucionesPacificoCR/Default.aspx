@@ -3,49 +3,52 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
     <br />
- 
-        <%--CARROUSEL--%>
-        <div id="carouselExampleCaptions" class="carousel slide div-center" data-ride="carousel" style="width:80%; height:30%; text-align:center">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner div-radius">
-                <div class="carousel-item active">
-                    <img src="www/css/img/imagen4.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Microondas Mabe.</h5>
-                        <p>Una máquina confiable para un tiempo de vida alargable.</p>
+            <div class="container" style="text-align: center">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h5 style="text-align: justify; color: white">Nuestra empresa es una distribuidora que se dedica a la comercialización
+                                electrodomésticos, audio, video, cómputo, entre otros. Fue fundada en el año 2000. 
+                                La empresa se expandió hacia otros mercados con poblaciones
+                                potenciales, basándose en un mercado agresivo, facilidades de pago y consolidación financiera, 
+                                dándose un crecimiento constante.
+                                Con el tiempo el grupo fortaleció su operación en diferentes zonas del país.
+                                En la actualidad la operación de Costa Rica se compone de más de 115  Puntos de Venta reconocidos,
+                                Los almacenes se encuentran distribuidos por todo el territorio de Costa Rica, logrando
+                                representación en las siete provincias y principales cantones del país.
+                        </h5>
+                    </div>
+                    <div class="col">
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="www/css/img/4.jpg" class="d-block w-100; img-thumbnail" alt="4">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="www/css/img/5.jpg" class="d-block w-100; img-thumbnail" alt="5">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="www/css/img/6.jpg" class="d-block w-100; img-thumbnail" alt="6">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="www/css/img/imagen5.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Computadoras de gama alta</h5>
-                        <p>¿Ocupás un portátil en tu día a día? Nosotros lo tenemos.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="www/css/img/imagen6.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Abarrotes</h5>
-                        <p>Productos selccionados en descuento hasta el 28 de Mayo.</p>
-                    </div>
-                </div>
+
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
 
+        <p style="color:white; text-align:center; margin-top:2rem; margin-bottom:2rem"><b>_____________________________________________________</b></p>
         <%----------------------------------------------------------------%>
     
     <br />

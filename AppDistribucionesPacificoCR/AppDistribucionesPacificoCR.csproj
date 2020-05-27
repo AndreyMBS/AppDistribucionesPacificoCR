@@ -52,6 +52,9 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\DAL\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -76,7 +79,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CatalogoProductos.aspx" />
+    <Content Include="CatalogoLineaAbarrotes.aspx" />
+    <Content Include="CatalogoLineaBlanca.aspx" />
+    <Content Include="CatalogoLineaHogar.aspx" />
+    <Content Include="CatalogoLineaTecnologica.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="ListaUsuarios.aspx" />
     <Content Include="Login.aspx" />
@@ -85,17 +91,43 @@
     <Content Include="RegistroProveedor.aspx" />
     <Content Include="Web.config" />
     <Content Include="www\css\bootstrap.min.css" />
+    <Content Include="www\css\img\4.jpg" />
+    <Content Include="www\css\img\5.jpg" />
+    <Content Include="www\css\img\6.jpg" />
+    <Content Include="www\css\img\Logo2.png" />
+    <Content Include="www\css\img\Logo3.png" />
     <Content Include="www\css\Styles.css" />
     <Content Include="www\js\bootstrap.min.js" />
     <Content Include="www\js\jquery-3.4.1.min.js" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CatalogoProductos.aspx.cs">
-      <DependentUpon>CatalogoProductos.aspx</DependentUpon>
+    <Compile Include="CatalogoLineaAbarrotes.aspx.cs">
+      <DependentUpon>CatalogoLineaAbarrotes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CatalogoProductos.aspx.designer.cs">
-      <DependentUpon>CatalogoProductos.aspx</DependentUpon>
+    <Compile Include="CatalogoLineaAbarrotes.aspx.designer.cs">
+      <DependentUpon>CatalogoLineaAbarrotes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogoLineaBlanca.aspx.cs">
+      <DependentUpon>CatalogoLineaBlanca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatalogoLineaBlanca.aspx.designer.cs">
+      <DependentUpon>CatalogoLineaBlanca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogoLineaHogar.aspx.cs">
+      <DependentUpon>CatalogoLineaHogar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatalogoLineaHogar.aspx.designer.cs">
+      <DependentUpon>CatalogoLineaHogar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogoLineaTecnologica.aspx.cs">
+      <DependentUpon>CatalogoLineaTecnologica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatalogoLineaTecnologica.aspx.designer.cs">
+      <DependentUpon>CatalogoLineaTecnologica.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -160,7 +192,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CatalogoProductos\" />
-    <Folder Include="www\css\img\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">

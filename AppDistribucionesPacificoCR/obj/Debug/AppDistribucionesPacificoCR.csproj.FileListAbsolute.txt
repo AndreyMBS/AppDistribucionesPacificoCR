@@ -190,3 +190,5 @@ C:\Users\andre\Desktop\AppDistribucionesPacificoCR\AppDistribucionesPacificoCR\b
 C:\Users\andre\Desktop\AppDistribucionesPacificoCR\AppDistribucionesPacificoCR\bin\DAL.dll.config
 C:\Users\andre\Desktop\AppDistribucionesPacificoCR\AppDistribucionesPacificoCR\bin\EntityFramework.xml
 C:\Users\andre\Desktop\AppDistribucionesPacificoCR\AppDistribucionesPacificoCR\bin\EntityFramework.SqlServer.xml
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\AppDistribucionesPacificoCR\bin\itextsharp.dll
+C:\Users\andre\Desktop\AppDistribucionesPacificoCR\AppDistribucionesPacificoCR\bin\itextsharp.xml

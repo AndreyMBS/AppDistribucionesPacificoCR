@@ -13,13 +13,15 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
+    <asp:Localize runat="server"></asp:Localize>
+
 </head>
 <body>
 
     <form id="form1" runat="server">
         <div>
             <nav class="navbar navbar-expand-lg navbar-light bg-light nav-border">
-              <a class="navbar-brand" href="default.aspx">Distribuciones Pacífico</a>
+              <a class="pull-left" href="default.aspx"><span style="display: inline;"><img src="www/css/img/Logo3.png" class="card-img-top div-radius" alt="..."></span></a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -29,12 +31,24 @@
                     <a class="nav-link" href="default.aspx">Inicio <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Catálogo
+                    <a class="nav-link dropdown-toggle" href="#" id="dropDownCatalogo" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Catálogo de productos
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="RegistroProducto.aspx">Registrar producto</a>
-                      <a class="dropdown-item" href="CatalogoProductos.aspx">Catálogo de productos</a>
+                    <div class="dropdown-menu" aria-labelledby="dropDownCatalogoLink">
+                        <a class="dropdown-item" href="CatalogoLineaBlanca.aspx">Catálogo de línea blanca</a>
+                        <a class="dropdown-item" href="CatalogoLineaTecnologica.aspx">Catálogo de línea tecnológica</a>
+                        <a class="dropdown-item" href="CatalogoLineaHogar.aspx">Catálogo de línea para el hogar</a>
+                        <a class="dropdown-item" href="CatalogoLineaAbarrotes.aspx">Catálogo de línea de abarrotes</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropDownAnadir" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Añadir
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropDownAnadirLink">
+                        <a class="dropdown-item" href="RegistroCliente.aspx">Registrar usuario</a>
+                        <a class="dropdown-item" href="RegistroProveedor.aspx">Registrar proveedor</a>
+                        <a class="dropdown-item" href="RegistroProducto.aspx">Registrar producto</a>
                     </div>
                   </li>
                 </ul>
@@ -64,13 +78,29 @@
     </form>
 </body>
 
-
-<script src="www/js/jquery-3.4.1.min.js"></script>
-<script src="www/js/bootstrap.min.js"></script>
 </html>
 
 <footer>
-    <br />
     
-    aaaaa
+    <div class="overlay">
+        <h5 style="color:black">Un gusto servirle</h5>
+        <h6>Tipos de pagos permitidos</h6>
+        <div>
+            <img style="margin:7px" src="https://logos-marcas.com/wp-content/uploads/2020/04/Visa-Logo.png" alt="Visa" width="45" height="50" />
+            <img style="margin:7px" src="https://blog.casadellibro.com/wp-content/uploads/2019/06/paypal-784404_1280-1024x512.png"alt="Visa" width="55" height="60" />
+            <img style="margin:7px" src="https://www.conviva.com/wp-content/uploads/2020/02/american-express.png" alt="Visa" width="55" height="60" />
+            <img style="margin:7px" src="https://upload.wikimedia.org/wikipedia/commons/7/72/MasterCard_early_1990s_logo.png" alt="Mastercard"  width="40" height="35"/>
+            <img style="margin:7px" src="https://thumbs.dreamstime.com/b/l%C3%ADnea-icono-del-pago-control-de-banco-dinero-y-muestra-linear-estilo-la-pluma-para-el-concepto-dise%C3%B1o-web-m%C3%B3viles-vector-143710790.jpg" alt="Visa" width="65" height="70" />
+            <img style="margin:7px" src="https://www.prestaprenda.com/assets/themes/custom-assets/imgs/icon_2.png" alt="Mastercard"  width="58" height="52"/>
+        </div>
+
+        <div class="float-left">
+            <img  src="www/css/img/Logo2.png" alt="Logo" width="85" height="80" />
+        </div>
+        <h6 class="text-left" style="margin: 20px; padding: 1px;">Distribuidora del Pacifico S.A.</h6>
+    </div>
+
+    <script src="www/js/jquery-3.4.1.min.js"></script>
+    <script src="www/js/bootstrap.min.js"></script>
+
 </footer>

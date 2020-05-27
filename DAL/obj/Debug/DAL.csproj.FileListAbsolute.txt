@@ -19,4 +19,3 @@ C:\Users\andre\Desktop\AppDistribucionesPacificoCR\DAL\bin\Debug\EntityFramework
 C:\Users\andre\Desktop\AppDistribucionesPacificoCR\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\andre\Desktop\AppDistribucionesPacificoCR\DAL\obj\Debug\DAL.dll
 C:\Users\andre\Desktop\AppDistribucionesPacificoCR\DAL\obj\Debug\DAL.pdb
-C:\Users\andre\Desktop\AppDistribucionesPacificoCR\DAL\obj\Debug\DAL.csprojAssemblyReference.cache

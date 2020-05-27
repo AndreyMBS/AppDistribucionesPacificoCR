@@ -14,11 +14,17 @@ namespace BLL
 
         public double descuento { set; get; }
 
+        public string descripcion { set; get; }
+
         public string unidadMedida { set; get; }
+
+        public string nombreProducto { set; get; }
 
         public string foto { set; get; }
 
         public string estado { set; get; }
+
+        public string exento { set; get; }
 
         public double precioVenta { set; get; }
 

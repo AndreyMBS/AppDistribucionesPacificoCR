@@ -27,6 +27,9 @@ namespace DAL
         public string estado { get; set; }
         public decimal precioVenta { get; set; }
         public int idClasificacion { get; set; }
+        public string nombreProducto { get; set; }
+        public string descripcion { get; set; }
+        public string exento { get; set; }
     
         public virtual TblClasificacion TblClasificacion { get; set; }
         public virtual TblProveedor TblProveedor { get; set; }

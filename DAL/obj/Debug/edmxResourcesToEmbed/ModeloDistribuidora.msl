@@ -29,19 +29,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TblProducto">
-      <EntityTypeMapping TypeName="ProyectoModel.TblProducto">
-        <MappingFragment StoreEntitySet="TblProducto">
-          <ScalarProperty Name="idClasificacion" ColumnName="idClasificacion" />
-          <ScalarProperty Name="precioVenta" ColumnName="precioVenta" />
-          <ScalarProperty Name="estado" ColumnName="estado" />
-          <ScalarProperty Name="foto" ColumnName="foto" />
-          <ScalarProperty Name="unidadMedida" ColumnName="unidadMedida" />
-          <ScalarProperty Name="cedulaLegal" ColumnName="cedulaLegal" />
-          <ScalarProperty Name="codBarra" ColumnName="codBarra" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="TblUsuario">
       <EntityTypeMapping TypeName="ProyectoModel.TblUsuario">
         <MappingFragment StoreEntitySet="TblUsuario">
@@ -62,6 +49,22 @@
           <ScalarProperty Name="telefono" ColumnName="telefono" />
           <ScalarProperty Name="cedula" ColumnName="cedula" />
           <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblProducto">
+      <EntityTypeMapping TypeName="ProyectoModel.TblProducto">
+        <MappingFragment StoreEntitySet="TblProducto">
+          <ScalarProperty Name="exento" ColumnName="exento" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="nombreProducto" ColumnName="nombreProducto" />
+          <ScalarProperty Name="idClasificacion" ColumnName="idClasificacion" />
+          <ScalarProperty Name="precioVenta" ColumnName="precioVenta" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="foto" ColumnName="foto" />
+          <ScalarProperty Name="unidadMedida" ColumnName="unidadMedida" />
+          <ScalarProperty Name="cedulaLegal" ColumnName="cedulaLegal" />
+          <ScalarProperty Name="codBarra" ColumnName="codBarra" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

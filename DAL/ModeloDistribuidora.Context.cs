@@ -28,8 +28,8 @@ namespace DAL
         public virtual DbSet<TblClasificacion> TblClasificacion { get; set; }
         public virtual DbSet<TblProveedor> TblProveedor { get; set; }
         public virtual DbSet<TblCliente_TblProducto> TblCliente_TblProducto { get; set; }
-        public virtual DbSet<TblProducto> TblProducto { get; set; }
         public virtual DbSet<TblUsuario> TblUsuario { get; set; }
         public virtual DbSet<TblClientes> TblClientes { get; set; }
+        public virtual DbSet<TblProducto> TblProducto { get; set; }
     }
 }

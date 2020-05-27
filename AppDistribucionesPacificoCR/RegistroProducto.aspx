@@ -20,13 +20,27 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-2">
-                        <asp:Label Text="Marca" runat="server" style="color:white"/>
+                        <asp:Label Text="Nombre del producto" runat="server" style="color:white"/>
                     </div>
                     <div class="col-md-8">
-                        <asp:TextBox id="txtMarca" CssClass="form-control" MaxLenght="80" runat="server" />  
+                        <asp:TextBox id="txtNombreProducto" CssClass="form-control" MaxLenght="80" runat="server" />  
                     </div>
                     <div class="col-md-1"> 
-                        <asp:RequiredFieldValidator id="requiredTxtMarca" ErrorMessage="La marca es un campo requerido" ControlToValidate="txtMarca" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator id="requiredTxtNombreProducto" ErrorMessage="El nombre del producto es un campo requerido" ControlToValidate="txtNombreProducto" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-2">
+                        <asp:Label Text="Descripción del producto" runat="server" style="color:white"/>
+                    </div>
+                    <div class="col-md-8">
+                        <asp:TextBox id="txtDescripcion" CssClass="form-control" MaxLenght="80" runat="server" />  
+                    </div>
+                    <div class="col-md-1"> 
+                        <asp:RequiredFieldValidator id="requiredTxtDescripcion" ErrorMessage="La descripción del producto es un campo requerido" ControlToValidate="txtDescripcion" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
                     </div>
                 </div>
             </div>
@@ -46,6 +60,24 @@
                     </div>
                     <div class="col-md-1"> 
                         <asp:RequiredFieldValidator id="requiredDropUnidad" ErrorMessage="La medida es un campo requerido" ControlToValidate="DropUnidad" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-2">
+                        <asp:Label Text="¿Está este producto exento de impuestos?" runat="server" style="color:white"/>
+                    </div>
+                    <div class="col-md-8" >
+                        <asp:DropDownList CssClass="form-control" ID="DropExento" class="col-md-12" runat="server">
+                            <asp:ListItem Text="Selecciona una opción" />
+                            <asp:ListItem Text="Sí" />
+                            <asp:ListItem Text="No" />
+                        </asp:DropDownList>  
+                    </div>
+                    <div class="col-md-1"> 
+                        <asp:RequiredFieldValidator id="requiredDropExento" ErrorMessage="La medida es un campo requerido" ControlToValidate="DropExento" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
                     </div>
                 </div>
             </div>

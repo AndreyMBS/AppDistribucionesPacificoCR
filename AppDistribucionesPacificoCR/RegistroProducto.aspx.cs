@@ -30,8 +30,18 @@ namespace AppDistribucionesPacificoCR
             this.producto.unidadMedida = this.DropUnidad.SelectedValue;
             this.producto.foto = this.producto.codBarra + "_" + this.fileUpload.FileName;
             this.producto.estado = "Disponible";
-            this.producto.precioVenta = int.Parse(this.txtPrecio.Text);
+            this.producto.nombreProducto = this.txtNombreProducto.Text.Trim();
+            this.producto.descripcion = this.txtDescripcion.Text.Trim();
+            double precio = this.producto.precioVenta = int.Parse(this.txtPrecio.Text);
             this.producto.idClasificacion = int.Parse(this.DropClasificacion.SelectedValue);
+            string exento = this.producto.exento = this.DropExento.SelectedValue;
+
+            if(exento=="No")
+            {
+                precio = precio+(precio * 0.13);
+            }//Fin de condición exento.
+
+            this.producto.precioVenta = precio;
 
             if (this.fileUpload.HasFile)
             {
@@ -39,7 +49,6 @@ namespace AppDistribucionesPacificoCR
             }//Fin de if-FileUpload.
 
             this.registrarProducto(this.producto);
-
             Response.Redirect("Default.aspx");
 
         }//Fin de btnRegistrarProducto_Click.
@@ -70,8 +79,11 @@ namespace AppDistribucionesPacificoCR
                 tblProducto.unidadMedida = pro.unidadMedida;
                 tblProducto.foto = pro.foto;
                 tblProducto.estado = pro.estado;
+                tblProducto.nombreProducto = pro.nombreProducto;
+                tblProducto.descripcion = pro.descripcion;
                 tblProducto.precioVenta = (decimal)pro.precioVenta;
                 tblProducto.idClasificacion = pro.idClasificacion;
+                tblProducto.exento = pro.exento;
 
                 this.entidades.TblProducto.Add(tblProducto);
 
