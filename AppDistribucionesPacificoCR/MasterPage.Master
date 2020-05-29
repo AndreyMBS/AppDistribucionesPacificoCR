@@ -42,13 +42,22 @@
                     </div>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropDownAnadir" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropDownAnadir" Visible="false" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" runat="server">
                       Añadir
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="dropDownAnadirLink">
+                    <div class="dropdown-menu" aria-labelledby="dropDownAnadirLink" >
                         <a class="dropdown-item" href="RegistroCliente.aspx">Registrar usuario</a>
                         <a class="dropdown-item" href="RegistroProveedor.aspx">Registrar proveedor</a>
                         <a class="dropdown-item" href="RegistroProducto.aspx">Registrar producto</a>
+                        <a class="dropdown-item" id="dropItemRegistroAdministrador" href="RegistroAdministrador.aspx" runat="server" visible="false">Registrar administrador</a>
+                    </div>
+                  </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropDownReporte" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catálogo de productos</a>
+                    <div class="dropdown-menu bg-dark">
+                        <a class="dropdown-item nav-link" href="#">Informe de clientes</a>
+                        <a class="dropdown-item nav-link" href="#">Informe de motos</a>
+                        <a class="dropdown-item nav-link" href="#">Informe de usuarios</a>
                     </div>
                   </li>
                 </ul>

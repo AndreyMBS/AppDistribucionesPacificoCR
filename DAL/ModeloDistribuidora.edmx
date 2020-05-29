@@ -49,6 +49,10 @@ warning 6002: The table/view 'Proyecto.dbo.TblCliente_TblProducto' does not have
           <Property Name="nombreProducto" Type="varchar" MaxLength="50" />
           <Property Name="descripcion" Type="varchar" MaxLength="60" />
           <Property Name="exento" Type="varchar" MaxLength="20" />
+          <Property Name="precioCompra" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="impuestoIVA" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="impuestoVenta" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="totalImpuestos" Type="decimal" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="TblProveedor">
           <Key>
@@ -289,6 +293,10 @@ warning 6002: The table/view 'Proyecto.dbo.TblCliente_TblProducto' does not have
           <Property Name="nombreProducto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="descripcion" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
           <Property Name="exento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="precioCompra" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="impuestoIVA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="impuestoVenta" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="totalImpuestos" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="TblClasificacion" Relationship="ProyectoModel.fk_clasificacion" FromRole="TblProducto" ToRole="TblClasificacion" />
           <NavigationProperty Name="TblProveedor" Relationship="ProyectoModel.fk_cedulaLegal" FromRole="TblProducto" ToRole="TblProveedor" />
           <NavigationProperty Name="TblCliente_TblProducto" Relationship="ProyectoModel.fk_codBarra2" FromRole="TblProducto" ToRole="TblCliente_TblProducto" />
@@ -389,6 +397,10 @@ warning 6002: The table/view 'Proyecto.dbo.TblCliente_TblProducto' does not have
           <EntitySetMapping Name="TblProducto">
             <EntityTypeMapping TypeName="ProyectoModel.TblProducto">
               <MappingFragment StoreEntitySet="TblProducto">
+                <ScalarProperty Name="totalImpuestos" ColumnName="totalImpuestos" />
+                <ScalarProperty Name="impuestoVenta" ColumnName="impuestoVenta" />
+                <ScalarProperty Name="impuestoIVA" ColumnName="impuestoIVA" />
+                <ScalarProperty Name="precioCompra" ColumnName="precioCompra" />
                 <ScalarProperty Name="exento" ColumnName="exento" />
                 <ScalarProperty Name="descripcion" ColumnName="descripcion" />
                 <ScalarProperty Name="nombreProducto" ColumnName="nombreProducto" />

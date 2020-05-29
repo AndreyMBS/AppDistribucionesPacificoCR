@@ -24,11 +24,19 @@ namespace BLL
 
         public string estado { set; get; }
 
+        public double ImpuestoVenta { set; get; }
+
         public string exento { set; get; }
+
+        public double precioCompra { set; get; }
 
         public double precioVenta { set; get; }
 
         public int idClasificacion { set; get; }
+
+        public double totalImpuestos { set; get; }
+
+        public double ImpuestoIVA { set; get; }
 
     }
 }

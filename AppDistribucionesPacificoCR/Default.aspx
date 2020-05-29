@@ -3,8 +3,63 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
     <br />
-            <div class="container" style="text-align: center">
+    <br />
+    
+    <div class="container" style="width:100%; padding-left:0em; padding-right:0em;">
+        <div class="row div-center">
+            <div class="col-sm-4">
+                <div class="card div-radius" style="width: 18rem;">
+                    <img src="https://www.greenit-solution.com/wp-content/uploads/2019/12/shutterstock_1165119418-300x150.jpg" class="card-img-top div-radius" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Linea blanca</h5>
+                        <p class="card-text">Ofrecemos una gran gama de productos en linea blanca.</p>
+                        <a href="#" class="btn" style="background-color:#0CE9B7;" border: 1.5px solid #000000; text-align:center;>Ver marcas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card div-radius" style="width: 18rem;">
+                    <img src="https://bantuhits.biz/wp-content/uploads/2020/02/lg-smartphones-banner_V40_V50_G7_D-300x150.jpg" class="card-img-top div-radius" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Tecnología</h5>
+                        <p class="card-text">Si está a la venta, lo tenemos aquí.</p>
+                        <a href="#" class="btn" style="background-color:#0CE9B7;" border: 1.5px solid #000000; text-align:center;>Ver marcas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card div-radius" style="width: 18rem;">
+                    <img src="https://images.canal1.com.co/wp-content/uploads/2020/02/26162224/Supermercado-300x150.jpg" class="card-img-top div-radius" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Abarrotes</h5>
+                        <p class="card-text">No te preocupés por esos productos que te hacen falta, nosotros los llevamos a la puerta de tu casa.</p>
+                        <a href="#" class="btn" style="background-color:#0CE9B7;" border: 1.5px solid #000000; text-align:center;">Ver marcas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card div-radius" style="width: 18rem;">
+                    <img src="https://images.canal1.com.co/wp-content/uploads/2020/02/26162224/Supermercado-300x150.jpg" class="card-img-top div-radius" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Abarrotes</h5>
+                        <p class="card-text">No te preocupés por esos productos que te hacen falta, nosotros los llevamos a la puerta de tu casa.</p>
+                        <a href="#" class="btn" style="background-color:#0CE9B7;" border: 1.5px solid #000000; text-align:center;">Ver marcas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+            
+        <%----------------------------------------------------------------%>
+    
+    <br />
+    <br />
+
+    <div class="container" style="text-align: center">
 
             <div class="container">
                 <div class="row">
@@ -47,46 +102,5 @@
 
             </div>
         </div>
-
-        <p style="color:white; text-align:center; margin-top:2rem; margin-bottom:2rem"><b>_____________________________________________________</b></p>
-        <%----------------------------------------------------------------%>
-    
-    <br />
-    <br />
-
-    <div class="container">
-        <div class="row div-center">
-            <div class="col-sm">
-                <div class="card div-radius" style="width: 18rem;">
-                    <img src="https://www.greenit-solution.com/wp-content/uploads/2019/12/shutterstock_1165119418-300x150.jpg" class="card-img-top div-radius" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Linea blanca</h5>
-                        <p class="card-text">Ofrecemos una gran gama de productos en linea blanca.</p>
-                        <a href="#" class="btn" style="background-color:#0CE9B7;" border: 1.5px solid #000000; text-align:center;>Ver marcas</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm">
-                <div class="card div-radius" style="width: 18rem;">
-                    <img src="https://bantuhits.biz/wp-content/uploads/2020/02/lg-smartphones-banner_V40_V50_G7_D-300x150.jpg" class="card-img-top div-radius" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Tecnología</h5>
-                        <p class="card-text">Si está a la venta, lo tenemos aquí.</p>
-                        <a href="#" class="btn" style="background-color:#0CE9B7;" border: 1.5px solid #000000; text-align:center;>Ver marcas</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm">
-                <div class="card div-radius" style="width: 18rem;">
-                    <img src="https://images.canal1.com.co/wp-content/uploads/2020/02/26162224/Supermercado-300x150.jpg" class="card-img-top div-radius" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Abarrotes</h5>
-                        <p class="card-text">No te preocupés por esos productos que te hacen falta, nosotros los llevamos a la puerta de tu casa.</p>
-                        <a href="#" class="btn" style="background-color:#0CE9B7;" border: 1.5px solid #000000; text-align:center;">Ver marcas</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 </asp:Content>

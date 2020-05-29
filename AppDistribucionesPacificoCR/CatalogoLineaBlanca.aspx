@@ -65,7 +65,8 @@
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target='#ID<%# DataBinder.Eval(Container.DataItem, "codBarra") %>'>Agregar al carrito</button>
+                                            <asp:Button id="btnAgregarCarrito" Text="Agregar al carrito" class="btn btn-primary" OnClick="btnAgregarCarrito_Click" runat="server" />
+                                            <button type="button" id="btnDetalles" class="btn btn-primary" data-toggle="modal" data-target='#ID<%# DataBinder.Eval(Container.DataItem, "codBarra") %>'>Ver más detalles</button>
                                         </div>
                                     </div>
                                 </div>
@@ -98,15 +99,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                             <div class="form-group">
-                                                                <div class="row">
-                                                                    <div class="col-md-12">
-                                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" %>Continuar con la compra</button>
-                                                                    </div>
-                                                                </div>
-                                                          </div>
                                                         </div>
-
                                                     </div>
                                                     <div class="col">
                                                         <div class="form-group">
@@ -145,17 +138,6 @@
                                                                     </div>
                                                                 </div>
                                                           </div>
-
-                                                          
-
-                                                        <div class="form-group">
-                                                                <div class="row">
-                                                                    <div class="col-md-12">
-                                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" %>Ir al carrito</button>
-                                                                    </div>
-                                                                </div>
-                                                          </div>
-
                                                     </div>
                                                 </div>
                                             </div>

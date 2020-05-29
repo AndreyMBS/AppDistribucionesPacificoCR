@@ -63,7 +63,8 @@
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target='#ID<%# DataBinder.Eval(Container.DataItem, "codBarra") %>'>Acciones</button>
+                                            <asp:Button id="btnAgregarCarrito" Text="Agregar al carrito" class="btn btn-primary" OnClick="btnAgregarCarrito_Click" runat="server" />
+                                            <button type="button" id="btnDetalles" class="btn btn-primary" data-toggle="modal" data-target='#ID<%# DataBinder.Eval(Container.DataItem, "codBarra") %>'>Ver más detalles</button>
                                         </div>
                                     </div>
                                 </div>
@@ -79,7 +80,66 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            
+
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <%--CARD BODY COMPLETO--%>
+
+                                                        <div class="card-body">
+                                                            <div class="form-group">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <img src='CatalogoProductos/<%# Eval("foto") %>'
+                                                                            alt='<%#Eval("codBarra") %>'
+                                                                            class="img-fluid rounded"
+                                                                            style="width: 400px; height: 160px" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <asp:Label Text="Nombre: " runat="server" />
+                                                                        <asp:Label ID="Label1" Text='<%#DataBinder.Eval(Container.DataItem, "nombreProducto") %>' Font-Bold="true"
+                                                                            runat="server" />
+                                                                    </div>
+                                                                </div>
+                                                          </div>
+                                                        <div class="form-group">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <asp:Label Text="Precio: " runat="server" />
+                                                                        <asp:Label ID="Label2" Text='<%#DataBinder.Eval(Container.DataItem, "precioVenta") %>' Font-Bold="true"
+                                                                            runat="server" />
+                                                                    </div>
+                                                                </div>
+                                                          </div>
+                                                        <div class="form-group">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <asp:Label Text="Exento de impuestos: " runat="server" />
+                                                                        <asp:Label ID="Label3" Text='<%#DataBinder.Eval(Container.DataItem, "exento") %>' Font-Bold="true"
+                                                                            runat="server" />
+                                                                    </div>
+                                                                </div>
+                                                          </div>
+                                                        <div class="form-group">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <asp:Label Text="Descripción: " runat="server" />
+                                                                        <asp:Label ID="Label4" Text='<%#DataBinder.Eval(Container.DataItem, "descripcion") %>' Font-Bold="true"
+                                                                            runat="server" />
+                                                                    </div>
+                                                                </div>
+                                                          </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -91,6 +151,6 @@
         </div>
        </div>
 
-    <asp:SqlDataSource id="dataProductos" runat="server" ConnectionString='<%$ ConnectionStrings:ProyectoConnectionString %>' SelectCommand="SELECT codBarra, nombreProducto, descripcion, precioVenta, foto FROM TblProducto WHERE (idClasificacion = 2) AND (estado='Disponible')"></asp:SqlDataSource>
+    <asp:SqlDataSource id="dataProductos" runat="server" ConnectionString='<%$ ConnectionStrings:ProyectoConnectionString %>' SelectCommand="SELECT codBarra, nombreProducto, descripcion, precioVenta, foto, exento FROM TblProducto WHERE (idClasificacion = 2) AND (estado='Disponible')"></asp:SqlDataSource>
 
 </asp:Content>

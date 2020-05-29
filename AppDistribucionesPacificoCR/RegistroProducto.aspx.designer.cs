@@ -87,22 +87,40 @@ namespace AppDistribucionesPacificoCR
         protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredDropExento;
 
         /// <summary>
-        /// txtPrecio control.
+        /// txtPrecioCompra control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrecio;
+        protected global::System.Web.UI.WebControls.TextBox txtPrecioCompra;
 
         /// <summary>
-        /// RequiredTxtPrecio control.
+        /// RequiredTxtPrecioCompra control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredTxtPrecio;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredTxtPrecioCompra;
+
+        /// <summary>
+        /// txtImpuestoVenta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtImpuestoVenta;
+
+        /// <summary>
+        /// RequiredtxtImpuestoVenta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredtxtImpuestoVenta;
 
         /// <summary>
         /// txtCodigoBarra control.

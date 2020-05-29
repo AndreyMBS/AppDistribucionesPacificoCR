@@ -15,6 +15,7 @@ namespace AppDistribucionesPacificoCR
     {
         private Producto producto;
         private ProyectoEntities entidades;
+        double calculoPrecioFinal;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -32,16 +33,29 @@ namespace AppDistribucionesPacificoCR
             this.producto.estado = "Disponible";
             this.producto.nombreProducto = this.txtNombreProducto.Text.Trim();
             this.producto.descripcion = this.txtDescripcion.Text.Trim();
-            double precio = this.producto.precioVenta = int.Parse(this.txtPrecio.Text);
             this.producto.idClasificacion = int.Parse(this.DropClasificacion.SelectedValue);
             string exento = this.producto.exento = this.DropExento.SelectedValue;
+            this.producto.ImpuestoIVA = 0;
+            double calculoPrecioCompra = this.producto.precioCompra = Double.Parse(this.txtPrecioCompra.Text);
+            this.producto.ImpuestoVenta = Double.Parse(this.txtImpuestoVenta.Text);
 
-            if(exento=="No")
+            if (exento=="No")
             {
-                precio = precio+(precio * 0.13);
-            }//Fin de condición exento.
+                double impuestoIVA = (calculoPrecioCompra * 0.13);
+                double impuestoVenta = (calculoPrecioCompra * (this.producto.ImpuestoVenta / 100));
+                calculoPrecioFinal = calculoPrecioCompra + (impuestoVenta + impuestoIVA);
 
-            this.producto.precioVenta = precio;
+                this.producto.ImpuestoIVA = 0.13;
+                this.producto.totalImpuestos = impuestoIVA + impuestoVenta;
+
+            }//Fin de condición exento.
+            else
+            {
+                this.producto.ImpuestoIVA = 0.0;
+                this.producto.totalImpuestos = 0.0;
+            }
+
+            this.producto.precioVenta = calculoPrecioFinal;
 
             if (this.fileUpload.HasFile)
             {
@@ -84,17 +98,18 @@ namespace AppDistribucionesPacificoCR
                 tblProducto.precioVenta = (decimal)pro.precioVenta;
                 tblProducto.idClasificacion = pro.idClasificacion;
                 tblProducto.exento = pro.exento;
+                tblProducto.precioCompra = (decimal)pro.precioCompra;
+                tblProducto.totalImpuestos = (decimal)pro.totalImpuestos;
+                tblProducto.impuestoVenta = (decimal)pro.ImpuestoVenta;
+                tblProducto.impuestoIVA = (decimal)pro.ImpuestoIVA;
 
                 this.entidades.TblProducto.Add(tblProducto);
-
                 this.entidades.SaveChanges();
-            }
+            }//Fin de try.
             catch(Exception ex)
             {
                 throw ex;
-            }
+            }//Fin de catch.
         }
-
-
     }
 }

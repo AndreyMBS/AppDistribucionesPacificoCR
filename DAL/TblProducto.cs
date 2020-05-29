@@ -30,6 +30,10 @@ namespace DAL
         public string nombreProducto { get; set; }
         public string descripcion { get; set; }
         public string exento { get; set; }
+        public Nullable<decimal> precioCompra { get; set; }
+        public Nullable<decimal> impuestoIVA { get; set; }
+        public Nullable<decimal> impuestoVenta { get; set; }
+        public Nullable<decimal> totalImpuestos { get; set; }
     
         public virtual TblClasificacion TblClasificacion { get; set; }
         public virtual TblProveedor TblProveedor { get; set; }

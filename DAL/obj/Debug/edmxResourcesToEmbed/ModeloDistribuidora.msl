@@ -55,6 +55,10 @@
     <EntitySetMapping Name="TblProducto">
       <EntityTypeMapping TypeName="ProyectoModel.TblProducto">
         <MappingFragment StoreEntitySet="TblProducto">
+          <ScalarProperty Name="totalImpuestos" ColumnName="totalImpuestos" />
+          <ScalarProperty Name="impuestoVenta" ColumnName="impuestoVenta" />
+          <ScalarProperty Name="impuestoIVA" ColumnName="impuestoIVA" />
+          <ScalarProperty Name="precioCompra" ColumnName="precioCompra" />
           <ScalarProperty Name="exento" ColumnName="exento" />
           <ScalarProperty Name="descripcion" ColumnName="descripcion" />
           <ScalarProperty Name="nombreProducto" ColumnName="nombreProducto" />

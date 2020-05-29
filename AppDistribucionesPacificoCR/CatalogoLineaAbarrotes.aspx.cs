@@ -11,10 +11,15 @@ namespace AppDistribucionesPacificoCR
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+        }
+
+        protected void btnAgregarCarrito_Click(object sender, EventArgs e)
+        {
             if (!HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                Response.Redirect("Login.aspx");
+                Response.Write("<script language='javascript'>window.alert('Para agregar un elemento al carrito debe estar logueado o registrado.');window.location='Login.aspx';</script>");
             }
-        }
+        }//Fin de btnAgregarCarrito_Click.
     }
 }

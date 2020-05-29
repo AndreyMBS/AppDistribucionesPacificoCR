@@ -85,13 +85,27 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-2">
-                        <asp:Label Text="Precio" runat="server" style="color:white"/>
+                        <asp:Label Text="Precio de compra" runat="server" style="color:white"/>
                     </div>
                     <div class="col-md-8">
-                        <asp:TextBox id="txtPrecio" CssClass="form-control" MaxLenght="80" runat="server" />  
+                        <asp:TextBox id="txtPrecioCompra" value="0" type="number" CssClass="form-control" MaxLenght="80" runat="server" />  
                     </div>
                     <div class="col-md-1"> 
-                        <asp:RequiredFieldValidator id="RequiredTxtPrecio" ErrorMessage="El precio es un campo requerido" ControlToValidate="txtPrecio" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator id="RequiredTxtPrecioCompra" ErrorMessage="El precio es un campo requerido" ControlToValidate="txtPrecioCompra" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-2">
+                        <asp:Label Text="Impuesto de venta" runat="server" style="color:white"/>
+                    </div>
+                    <div class="col-md-8">
+                        <asp:TextBox id="txtImpuestoVenta" type="number" value="0" CssClass="form-control" MaxLenght="80" runat="server" />  
+                    </div>
+                    <div class="col-md-1"> 
+                        <asp:RequiredFieldValidator id="RequiredtxtImpuestoVenta" ErrorMessage="El precio es un campo requerido" ControlToValidate="txtImpuestoVenta" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
                     </div>
                 </div>
             </div>
@@ -113,7 +127,7 @@
               <div class="form-group">
                  <div class="row">
                     <div class="col-md-2">
-                        <asp:Label Text="Proveedor" runat="server"  />
+                        <asp:Label Text="Proveedor" runat="server" style="color:white" />
                     </div>
                     <div class="col-md-8">
                         <asp:DropDownList ID="DropProveedor" DataSourceID="dataSourceProducto" runat="server" CssClass="form-control" DataTextField="nombreCompleto" DataValueField="cedulaLegal">
@@ -129,7 +143,7 @@
             <div class="form-group">
                  <div class="row">
                     <div class="col-md-2">
-                        <asp:Label Text="Categoria" runat="server"  />
+                        <asp:Label Text="Categoria" runat="server" style="color:white" />
                     </div>
                     <div class="col-md-8">
                         <asp:DropDownList ID="DropClasificacion" DataSourceID="dataSourceClasificacion" runat="server" CssClass="form-control" DataTextField="tipo" DataValueField="idClasificacion">

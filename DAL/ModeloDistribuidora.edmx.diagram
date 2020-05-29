@@ -12,7 +12,7 @@
         <EntityTypeShape EntityType="ProyectoModel.TblClientes" Width="1.5" PointX="3" PointY="1" />
         <AssociationConnector Association="ProyectoModel.fk_cedula" />
         <AssociationConnector Association="ProyectoModel.fk_rol" />
-        <EntityTypeShape EntityType="ProyectoModel.TblProducto" Width="1.5" PointX="8" PointY="4.125" />
+        <EntityTypeShape EntityType="ProyectoModel.TblProducto" Width="1.5" PointX="8" PointY="3.75" />
         <AssociationConnector Association="ProyectoModel.fk_clasificacion" />
         <AssociationConnector Association="ProyectoModel.fk_cedulaLegal" />
         <AssociationConnector Association="ProyectoModel.fk_codBarra2" />

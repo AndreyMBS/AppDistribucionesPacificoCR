@@ -121,6 +121,10 @@
     <Property Name="nombreProducto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="descripcion" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
     <Property Name="exento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="precioCompra" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="impuestoIVA" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="impuestoVenta" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="totalImpuestos" Type="Decimal" Precision="18" Scale="0" />
     <NavigationProperty Name="TblClasificacion" Relationship="ProyectoModel.fk_clasificacion" FromRole="TblProducto" ToRole="TblClasificacion" />
     <NavigationProperty Name="TblProveedor" Relationship="ProyectoModel.fk_cedulaLegal" FromRole="TblProducto" ToRole="TblProveedor" />
     <NavigationProperty Name="TblCliente_TblProducto" Relationship="ProyectoModel.fk_codBarra2" FromRole="TblProducto" ToRole="TblCliente_TblProducto" />

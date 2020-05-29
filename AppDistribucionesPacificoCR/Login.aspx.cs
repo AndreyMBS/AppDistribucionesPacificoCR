@@ -26,11 +26,13 @@ namespace AppDistribucionesPacificoCR
                 //se utiliza el método validar perfil
                 if (this.validarPerfil(this.txtUsuario.Text.Trim(), this.txtContrasena.Text.Trim()))
                 {
+                   
                     //se crea la cookie de autenticacion sin recordar la sesión
-                    FormsAuthentication.SetAuthCookie(this.txtUsuario.Text.Trim(), false);
+                    FormsAuthentication.SetAuthCookie(this.txtUsuario.Text.Trim(), true);
+                    Session["userName"] = this.txtUsuario.Text.Trim();
 
                     //se redirreciona el usuario al formulario default
-                    
+
                     Response.Redirect("Default.aspx");
                 }
                 else
@@ -38,7 +40,7 @@ namespace AppDistribucionesPacificoCR
                     Response.Write("<script lenguage='JavaScript'>alert('Nombre de usuario o password incorrecto') </script>");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
