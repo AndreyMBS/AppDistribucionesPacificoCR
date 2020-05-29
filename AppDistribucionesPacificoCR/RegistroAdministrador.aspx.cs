@@ -72,21 +72,5 @@ namespace AppDistribucionesPacificoCR
             }
         }//Fin de registrarCliente.
 
-        //public string ConsultarSesion(string strUsuarioLogueado)
-        //{
-            
-        //    string strconn = "Data Source=DESKTOP-M9C2RDI\\SQLEXPRESS;Initial Catalog=Proyecto;Persist Security Info=True;User ID=userProyecto;Password=ucr2020";
-        //    SqlConnection con = new SqlConnection(strconn);
-        //    con.Open();
-        //    //----------------------------------------------//
-        //    string query = "SELECT rol FROM TblUsuario WHERE nombreUsuario = @strUsuarioLogueado";
-        //    SqlCommand command = new SqlCommand(query, con);
-        //    command.Parameters.AddWithValue("@strUsuarioLogueado", strUsuarioLogueado);
-        //    //----------------------------------------------//
-        //    string rolObtenido = Convert.ToString(command.ExecuteScalar());
-        //    return rolObtenido;
-        //}
-
-
     }//Fin de partial class.
 }

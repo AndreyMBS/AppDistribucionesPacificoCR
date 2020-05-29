@@ -77,7 +77,7 @@
                         </asp:DropDownList>  
                     </div>
                     <div class="col-md-1"> 
-                        <asp:RequiredFieldValidator id="requiredDropExento" ErrorMessage="La medida es un campo requerido" ControlToValidate="DropExento" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator id="requiredDropExento"  Value="-1" ErrorMessage="La medida es un campo requerido" ControlToValidate="DropExento" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                         <asp:Label Text="Precio de compra" runat="server" style="color:white"/>
                     </div>
                     <div class="col-md-8">
-                        <asp:TextBox id="txtPrecioCompra" value="0" type="number" CssClass="form-control" MaxLenght="80" runat="server" />  
+                        <asp:TextBox id="txtPrecioCompra" min="0" type="number" CssClass="form-control" MaxLenght="80" runat="server" />  
                     </div>
                     <div class="col-md-1"> 
                         <asp:RequiredFieldValidator id="RequiredTxtPrecioCompra" ErrorMessage="El precio es un campo requerido" ControlToValidate="txtPrecioCompra" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
@@ -102,10 +102,10 @@
                         <asp:Label Text="Impuesto de venta" runat="server" style="color:white"/>
                     </div>
                     <div class="col-md-8">
-                        <asp:TextBox id="txtImpuestoVenta" type="number" value="0" CssClass="form-control" MaxLenght="80" runat="server" />  
+                        <asp:TextBox id="txtImpuestoVenta" type="number" value="0" min="0" CssClass="form-control" MaxLenght="80" runat="server" />  
                     </div>
                     <div class="col-md-1"> 
-                        <asp:RequiredFieldValidator id="RequiredtxtImpuestoVenta" ErrorMessage="El precio es un campo requerido" ControlToValidate="txtImpuestoVenta" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator id="RequiredtxtImpuestoVentag"  ErrorMessage="El precio es un campo requerido" ControlToValidate="txtImpuestoVenta" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
                     </div>
                 </div>
             </div>
@@ -131,11 +131,11 @@
                     </div>
                     <div class="col-md-8">
                         <asp:DropDownList ID="DropProveedor" DataSourceID="dataSourceProducto" runat="server" CssClass="form-control" DataTextField="nombreCompleto" DataValueField="cedulaLegal">
-                            <asp:ListItem Text="Seleccione un proveedor" Value="0" Selected="false" />
+                            <asp:ListItem Text="Seleccione un proveedor" Value="-1" Selected="false" />
                         </asp:DropDownList>
                     </div>
                     <div class="cold-md-1">
-                        <asp:RequiredFieldValidator id="requiredDropProveedor" ErrorMessage="El proveedor a vender el producto es un campo requerido." ControlToValidate="DropProveedor" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator id="requiredDropProveedor"  Value="-1" ErrorMessage="El proveedor a vender el producto es un campo requerido." ControlToValidate="DropProveedor" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
                     </div>
                 </div>
             </div>
@@ -147,11 +147,11 @@
                     </div>
                     <div class="col-md-8">
                         <asp:DropDownList ID="DropClasificacion" DataSourceID="dataSourceClasificacion" runat="server" CssClass="form-control" DataTextField="tipo" DataValueField="idClasificacion">
-                            <asp:ListItem Text="Seleccione una clasificación" Value="0" Selected="false" />
+                            <asp:ListItem Text="Seleccione una clasificación" Value="-1" Selected="false" />
                         </asp:DropDownList>
                     </div>
                     <div class="cold-md-1">
-                        <asp:RequiredFieldValidator id="RequiredDropClasificacion" ErrorMessage="La clasificación del producto es requerida." ControlToValidate="DropClasificacion" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator id="RequiredDropClasificacion"  Value="-1" ErrorMessage="La clasificación del producto es requerida." ControlToValidate="DropClasificacion" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
                     </div>
                 </div>
             </div>

@@ -15,13 +15,14 @@ namespace AppDistribucionesPacificoCR
     {
         public string strRolObtenido;
         string strUsuarioLogueado;
+        CatalogoLineaAbarrotes catalogoLineaAbarrotes;
 
         private wsindicadoreseconomicos wsindicadoreseconomicos = null;
         private DataSet datos=null;
 
-        
         protected void Page_Load(object sender, EventArgs e)
         {
+            catalogoLineaAbarrotes = new CatalogoLineaAbarrotes();
             this.obtenerTipoCambio();
             //Ponerle try-catch.
 
@@ -43,11 +44,13 @@ namespace AppDistribucionesPacificoCR
                     {
                         this.dropDownAnadir.Visible = true;
                         this.dropItemRegistroAdministrador.Visible = false;
+                        this.dropDownReporte.Visible = true;
                     }
                     else if (strRolObtenido == "AF")
                     {
                         this.dropDownAnadir.Visible = true;
                         this.dropItemRegistroAdministrador.Visible = true;
+                        this.dropDownReporte.Visible = true;
                     }
                 }
                 if(Session["userName"] == null)
@@ -55,7 +58,7 @@ namespace AppDistribucionesPacificoCR
                         Session.Clear();
                         Session.Abandon();
                         FormsAuthentication.SignOut();
-                        Response.Write("<script lenguage='JavaScript'>alert('Está entrando') </script>");
+                        
                 }
             }
             
@@ -94,7 +97,6 @@ namespace AppDistribucionesPacificoCR
                 throw ex;
             }
         }//Fin de método para obtenerTipoCambio.
-
 
 
     }

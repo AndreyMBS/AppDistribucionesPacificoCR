@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DtsModelosInformesProductos" targetNamespace="http://tempuri.org/DtsModelosInformesProductos.xsd" xmlns:mstns="http://tempuri.org/DtsModelosInformesProductos.xsd" xmlns="http://tempuri.org/DtsModelosInformesProductos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ProyectoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ProyectoConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ProyectoConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Vp_Informe_ProductosTableAdapter" GeneratorDataComponentClassName="Vp_Informe_ProductosTableAdapter" Name="Vp_Informe_Productos" UserDataComponentName="Vp_Informe_ProductosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProyectoConnectionString (Web.config)" DbObjectName="Proyecto.dbo.Vp_Informe_Productos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT codBarra, NombreProducto, descripcion, precioCompra, precioVenta, exento, estado, impuestoVenta, impuestoIVA, tipo FROM dbo.Vp_Informe_Productos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="codBarra" DataSetColumn="codBarra" />
+              <Mapping SourceColumn="NombreProducto" DataSetColumn="NombreProducto" />
+              <Mapping SourceColumn="descripcion" DataSetColumn="descripcion" />
+              <Mapping SourceColumn="precioCompra" DataSetColumn="precioCompra" />
+              <Mapping SourceColumn="precioVenta" DataSetColumn="precioVenta" />
+              <Mapping SourceColumn="exento" DataSetColumn="exento" />
+              <Mapping SourceColumn="estado" DataSetColumn="estado" />
+              <Mapping SourceColumn="impuestoVenta" DataSetColumn="impuestoVenta" />
+              <Mapping SourceColumn="impuestoIVA" DataSetColumn="impuestoIVA" />
+              <Mapping SourceColumn="tipo" DataSetColumn="tipo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DtsModelosInformesProductos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DtsModelosInformesProductos" msprop:Generator_UserDSName="DtsModelosInformesProductos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Vp_Informe_Productos" msprop:Generator_TableClassName="Vp_Informe_ProductosDataTable" msprop:Generator_TableVarName="tableVp_Informe_Productos" msprop:Generator_TablePropName="Vp_Informe_Productos" msprop:Generator_RowDeletingName="Vp_Informe_ProductosRowDeleting" msprop:Generator_RowChangingName="Vp_Informe_ProductosRowChanging" msprop:Generator_RowEvHandlerName="Vp_Informe_ProductosRowChangeEventHandler" msprop:Generator_RowDeletedName="Vp_Informe_ProductosRowDeleted" msprop:Generator_UserTableName="Vp_Informe_Productos" msprop:Generator_RowChangedName="Vp_Informe_ProductosRowChanged" msprop:Generator_RowEvArgName="Vp_Informe_ProductosRowChangeEvent" msprop:Generator_RowClassName="Vp_Informe_ProductosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codBarra" msprop:Generator_ColumnVarNameInTable="columncodBarra" msprop:Generator_ColumnPropNameInRow="codBarra" msprop:Generator_ColumnPropNameInTable="codBarraColumn" msprop:Generator_UserColumnName="codBarra">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NombreProducto" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNombreProducto" msprop:Generator_ColumnPropNameInRow="NombreProducto" msprop:Generator_ColumnPropNameInTable="NombreProductoColumn" msprop:Generator_UserColumnName="NombreProducto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="precioCompra" msprop:Generator_ColumnVarNameInTable="columnprecioCompra" msprop:Generator_ColumnPropNameInRow="precioCompra" msprop:Generator_ColumnPropNameInTable="precioCompraColumn" msprop:Generator_UserColumnName="precioCompra" type="xs:decimal" minOccurs="0" />
+              <xs:element name="precioVenta" msprop:Generator_ColumnVarNameInTable="columnprecioVenta" msprop:Generator_ColumnPropNameInRow="precioVenta" msprop:Generator_ColumnPropNameInTable="precioVentaColumn" msprop:Generator_UserColumnName="precioVenta" type="xs:decimal" />
+              <xs:element name="exento" msprop:Generator_ColumnVarNameInTable="columnexento" msprop:Generator_ColumnPropNameInRow="exento" msprop:Generator_ColumnPropNameInTable="exentoColumn" msprop:Generator_UserColumnName="exento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="estado" msprop:Generator_ColumnVarNameInTable="columnestado" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_UserColumnName="estado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="impuestoVenta" msprop:Generator_ColumnVarNameInTable="columnimpuestoVenta" msprop:Generator_ColumnPropNameInRow="impuestoVenta" msprop:Generator_ColumnPropNameInTable="impuestoVentaColumn" msprop:Generator_UserColumnName="impuestoVenta" type="xs:decimal" minOccurs="0" />
+              <xs:element name="impuestoIVA" msprop:Generator_ColumnVarNameInTable="columnimpuestoIVA" msprop:Generator_ColumnPropNameInRow="impuestoIVA" msprop:Generator_ColumnPropNameInTable="impuestoIVAColumn" msprop:Generator_UserColumnName="impuestoIVA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tipo" msprop:Generator_ColumnVarNameInTable="columntipo" msprop:Generator_ColumnPropNameInRow="tipo" msprop:Generator_ColumnPropNameInTable="tipoColumn" msprop:Generator_UserColumnName="tipo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Vp_Informe_Productos" />
+      <xs:field xpath="mstns:codBarra" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -10,4 +10,3 @@ C:\Users\andre\Desktop\AppDistribucionesPacificoCR\BLL\bin\Debug\itextsharp.xml
 C:\Users\andre\Desktop\AppDistribucionesPacificoCR\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\andre\Desktop\AppDistribucionesPacificoCR\BLL\obj\Debug\BLL.dll
 C:\Users\andre\Desktop\AppDistribucionesPacificoCR\BLL\obj\Debug\BLL.pdb
-C:\Users\andre\Desktop\AppDistribucionesPacificoCR\BLL\obj\Debug\BLL.csprojAssemblyReference.cache

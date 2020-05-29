@@ -16,10 +16,10 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-2">
-                        <asp:Label Text="Nombre completo" runat="server" style="color:white"/>
+                        <asp:Label Text="Nombre completo" runat="server" style="color:white" />
                     </div>
                     <div class="col-md-8">
-                        <asp:TextBox id="txtNombre" CssClass="form-control" MaxLenght="80" runat="server" />  
+                        <asp:TextBox id="txtNombre" CssClass="form-control" MaxLenght="80" runat="server" placeholder="Nombre Apellidos" />  
                     </div>
                     <div class="col-md-1"> 
                         <asp:RequiredFieldValidator id="requiredTxtNombre" ErrorMessage="El nombre es un campo requerido" ControlToValidate="txtNombre" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
@@ -47,7 +47,7 @@
                         <asp:Label Text="Telefono" runat="server" style="color:white"/>
                     </div>
                     <div class="col-md-8">
-                        <asp:TextBox id="txtTelefono" CssClass="form-control" MaxLenght="80" runat="server" />  
+                        <asp:TextBox id="txtTelefono" CssClass="form-control" MaxLenght="80" runat="server" placeholder="########" />  
                     </div>
                     <div class="col-md-1"> 
                         <asp:RequiredFieldValidator id="requiredTxtTelefono" ErrorMessage="El teléfono es un campo requerido" ControlToValidate="txtTelefono" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>
@@ -61,7 +61,7 @@
                         <asp:Label Text="Email" runat="server" style="color:white"/>
                     </div>
                     <div class="col-md-8">
-                        <asp:TextBox id="txtEmail" type="email" CssClass="form-control" MaxLenght="80" runat="server" />  
+                        <asp:TextBox id="txtEmail" type="email" CssClass="form-control" MaxLenght="80" runat="server" placeholder="correo@domain.com" />  
                     </div>
                     <div class="col-md-1"> 
                         <asp:RequiredFieldValidator id="requiredTxtEmail" ErrorMessage="El email es un campo requerido" ControlToValidate="txtEmail" ForeColor="Red" runat="server">*</asp:RequiredFieldValidator>

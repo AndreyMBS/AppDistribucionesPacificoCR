@@ -16,10 +16,29 @@ namespace AppDistribucionesPacificoCR
         private Producto producto;
         private ProyectoEntities entidades;
         double calculoPrecioFinal;
+        public MasterPage masterPage;
+        string strRolObtenido;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             this.entidades = new ProyectoEntities();
+            this.masterPage = new MasterPage();
+
+            if (HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                string strUsuarioLogueado = Session["userName"].ToString();
+
+                strRolObtenido = masterPage.ConsultarSesion(strUsuarioLogueado);
+
+                if (strRolObtenido == "C")
+                {
+                    Response.Write("<script language='javascript'>window.alert('Este usuario no cuenta con permisos de administración.');window.location='Default.aspx';</script>");
+                }//Fin de if para comprobar sesión. 
+            }
+            else
+            {
+                Response.Write("<script language='javascript'>window.alert('Usted no se encuentra logueado.');window.location='Default.aspx';</script>");
+            }
         }//Fin de Page_Load.
 
         protected void btnRegistrarProducto_Click(object sender, EventArgs e)
@@ -35,7 +54,6 @@ namespace AppDistribucionesPacificoCR
             this.producto.descripcion = this.txtDescripcion.Text.Trim();
             this.producto.idClasificacion = int.Parse(this.DropClasificacion.SelectedValue);
             string exento = this.producto.exento = this.DropExento.SelectedValue;
-            this.producto.ImpuestoIVA = 0;
             double calculoPrecioCompra = this.producto.precioCompra = Double.Parse(this.txtPrecioCompra.Text);
             this.producto.ImpuestoVenta = Double.Parse(this.txtImpuestoVenta.Text);
 
@@ -45,13 +63,13 @@ namespace AppDistribucionesPacificoCR
                 double impuestoVenta = (calculoPrecioCompra * (this.producto.ImpuestoVenta / 100));
                 calculoPrecioFinal = calculoPrecioCompra + (impuestoVenta + impuestoIVA);
 
-                this.producto.ImpuestoIVA = 0.13;
+                this.producto.ImpuestoIVA = 13;
                 this.producto.totalImpuestos = impuestoIVA + impuestoVenta;
 
             }//Fin de condición exento.
-            else
+            if (exento == "Sí")
             {
-                this.producto.ImpuestoIVA = 0.0;
+                this.producto.ImpuestoIVA = 0;
                 this.producto.totalImpuestos = 0.0;
             }
 

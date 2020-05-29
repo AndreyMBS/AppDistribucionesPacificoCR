@@ -106,7 +106,7 @@
     <Content Include="CatalogoLineaTecnologica.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="InformeClientes.aspx" />
-    <Content Include="InformeLineaBlanca.aspx" />
+    <Content Include="InformeProductos.aspx" />
     <Content Include="ListaUsuarios.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="RegistroAdministrador.aspx" />
@@ -115,6 +115,17 @@
     <Content Include="RegistroProveedor.aspx" />
     <Content Include="Informes\DtsModelosInformes.xsc">
       <DependentUpon>DtsModelosInformes.xsd</DependentUpon>
+    </Content>
+    <Content Include="Informes\DtsModelosInformesProductos.xsc">
+      <DependentUpon>DtsModelosInformesProductos.xsd</DependentUpon>
+    </Content>
+    <None Include="Informes\DtsModelosInformesProductos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DtsModelosInformesProductos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Informes\DtsModelosInformesProductos.xss">
+      <DependentUpon>DtsModelosInformesProductos.xsd</DependentUpon>
     </Content>
     <None Include="Informes\DtsModelosInformes.xsd">
       <SubType>Designer</SubType>
@@ -193,6 +204,11 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Informes\DtsModelosInformesProductos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DtsModelosInformesProductos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InformeClientes.aspx.cs">
       <DependentUpon>InformeClientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -200,12 +216,12 @@
     <Compile Include="InformeClientes.aspx.designer.cs">
       <DependentUpon>InformeClientes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="InformeLineaBlanca.aspx.cs">
-      <DependentUpon>InformeLineaBlanca.aspx</DependentUpon>
+    <Compile Include="InformeProductos.aspx.cs">
+      <DependentUpon>InformeProductos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="InformeLineaBlanca.aspx.designer.cs">
-      <DependentUpon>InformeLineaBlanca.aspx</DependentUpon>
+    <Compile Include="InformeProductos.aspx.designer.cs">
+      <DependentUpon>InformeProductos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Informes\DtsModelosInformes.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -315,6 +331,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Informes\InformeClientes.rdlc" />
+    <EmbeddedResource Include="Informes\InformeProductos.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -22,13 +22,12 @@
                         RepeatColumns="3"
                         DataSourceID="dataProductos"
                         AlternatingItemStyle-Wrap="true"
-                        CssClass="table table-responsive-lg">
-         
+                        CssClass="table table-responsive-lg"
+                        OnItemCommand="lista_ItemCommand">
                         <ItemTemplate>
                             <div class="Card">
                                 <div class="card-header">
                                     <h5 class="card-title text-center">
-
                                         <asp:Label ID="lblNombreProducto" Text='<%# DataBinder.Eval(Container.DataItem,"nombreProducto") %>' Font-Bold="true" runat="Server" />
                                     </h5>
                                 </div>
@@ -63,8 +62,9 @@
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <asp:Button ID="btnAgregarCarrito" Text="Agregar al carrito" class="btn btn-primary" OnClick="btnAgregarCarrito_Click" runat="server" />
+                                            <asp:Button ID="btn" Text="Agregar al carrito" class="btn btn-primary" OnClick="btnAgregarCarrito_Click" runat="server" />
                                             <button type="button" id="btnDetalles" class="btn btn-primary" data-toggle="modal" data-target='#ID<%# DataBinder.Eval(Container.DataItem, "codBarra") %>'>Ver más detalles</button>
+                                            <%--<div id="auxAdministrativas" runat="server"><button type="button" id="btnOpcionesAdministrativas" class="btn btn-warning" data-toggle="modal" data-target='#ID<%# DataBinder.Eval(Container.DataItem, "codBarra") %>'>Opciones administrativas</button></div>--%>
                                         </div>
                                     </div>
                                 </div>
@@ -105,7 +105,6 @@
                                                                 </div>
                                                           </div>
                                                         </div>
-
                                                     </div>
                                                     <div class="col">
                                                         <div class="form-group">
@@ -153,9 +152,6 @@
                                                                     </div>
                                                                 </div>
                                                           </div>
-
-                                                          
-
                                                         <div class="form-group">
                                                                 <div class="row">
                                                                     <div class="col-md-12">
@@ -170,7 +166,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div><%--Fin del modal 1--%>
+
                         </ItemTemplate>
                     </asp:DataList>
                 </div>

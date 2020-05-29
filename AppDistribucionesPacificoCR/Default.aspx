@@ -5,53 +5,54 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
     <br />
-    <br />
     
-    <div class="container" style="width:100%; padding-left:0em; padding-right:0em;">
-        <div class="row div-center">
-            <div class="col-sm-4">
-                <div class="card div-radius" style="width: 18rem;">
-                    <img src="https://www.greenit-solution.com/wp-content/uploads/2019/12/shutterstock_1165119418-300x150.jpg" class="card-img-top div-radius" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Linea blanca</h5>
-                        <p class="card-text">Ofrecemos una gran gama de productos en linea blanca.</p>
-                        <a href="#" class="btn" style="background-color:#0CE9B7;" border: 1.5px solid #000000; text-align:center;>Ver marcas</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card div-radius" style="width: 18rem;">
-                    <img src="https://bantuhits.biz/wp-content/uploads/2020/02/lg-smartphones-banner_V40_V50_G7_D-300x150.jpg" class="card-img-top div-radius" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Tecnología</h5>
-                        <p class="card-text">Si está a la venta, lo tenemos aquí.</p>
-                        <a href="#" class="btn" style="background-color:#0CE9B7;" border: 1.5px solid #000000; text-align:center;>Ver marcas</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card div-radius" style="width: 18rem;">
-                    <img src="https://images.canal1.com.co/wp-content/uploads/2020/02/26162224/Supermercado-300x150.jpg" class="card-img-top div-radius" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Abarrotes</h5>
-                        <p class="card-text">No te preocupés por esos productos que te hacen falta, nosotros los llevamos a la puerta de tu casa.</p>
-                        <a href="#" class="btn" style="background-color:#0CE9B7;" border: 1.5px solid #000000; text-align:center;">Ver marcas</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card div-radius" style="width: 18rem;">
-                    <img src="https://images.canal1.com.co/wp-content/uploads/2020/02/26162224/Supermercado-300x150.jpg" class="card-img-top div-radius" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Abarrotes</h5>
-                        <p class="card-text">No te preocupés por esos productos que te hacen falta, nosotros los llevamos a la puerta de tu casa.</p>
-                        <a href="#" class="btn" style="background-color:#0CE9B7;" border: 1.5px solid #000000; text-align:center;">Ver marcas</a>
-                    </div>
-                </div>
+    <div class="container columnaGeneral">
+      <center>
+      <div class="row columnaGeneral">
+        <div class="col-sm-6 columnas">
+          <div class="card div-radius" style="width: 18rem;">
+            <img src="https://www.greenit-solution.com/wp-content/uploads/2019/12/shutterstock_1165119418-300x150.jpg" class="card-img-top div-radius" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Linea blanca</h5>
+                <p class="card-text">Ofrecemos una gran gama de productos en linea blanca.</p>
+                <a href="#" class="btn" style="background-color:#0CE9B7;" border: 1.5px solid #000000; text-align:center;>Ver marcas</a>
             </div>
         </div>
+        </div>
+        <div class="col-sm-6 columnas">
+          <div class="card div-radius" style="width: 18rem;">
+            <img src="https://bantuhits.biz/wp-content/uploads/2020/02/lg-smartphones-banner_V40_V50_G7_D-300x150.jpg" class="card-img-top div-radius" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Tecnología</h5>
+                <p class="card-text">Si está a la venta, lo tenemos aquí.</p>
+                <a href="#" class="btn" style="background-color:#0CE9B7;" border: 1.5px solid #000000; text-align:center;>Ver marcas</a>
+            </div>
+        </div>
+        </div>
+          <div class="col-sm-6 columnas">
+          <div class="card div-radius" style="width: 18rem;">
+            <img src="https://images.canal1.com.co/wp-content/uploads/2020/02/26162224/Supermercado-300x150.jpg" class="card-img-top div-radius" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Abarrotes</h5>
+                <p class="card-text">No te preocupés por esos productos que te hacen falta, nosotros los llevamos a la puerta de tu casa.</p>
+                <a href="#" class="btn" style="background-color:#0CE9B7;" border: 1.5px solid #000000; text-align:center;">Ver marcas</a>
+            </div>
+        </div>
+        </div>
+          <div class="col-sm-6 columnas">
+          <div class="card div-radius" style="width: 18rem;">
+            <img src="https://images.canal1.com.co/wp-content/uploads/2020/02/26162224/Supermercado-300x150.jpg" class="card-img-top div-radius" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Abarrotes</h5>
+                <p class="card-text">No te preocupés por esos productos que te hacen falta, nosotros los llevamos a la puerta de tu casa.</p>
+                <a href="#" class="btn" style="background-color:#0CE9B7;" border: 1.5px solid #000000; text-align:center;">Ver marcas</a>
+            </div>
+        </div>
+        </div>
+      </div>
+        </center>
     </div>
-
+    
     <br />
             
         <%----------------------------------------------------------------%>
@@ -64,7 +65,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <h5 style="text-align: justify; color: white">Nuestra empresa es una distribuidora que se dedica a la comercialización
+                        <h6 class="div-radius" style="text-align: justify; color: black; background-color:white;">Nuestra empresa es una distribuidora que se dedica a la comercialización
                                 electrodomésticos, audio, video, cómputo, entre otros. Fue fundada en el año 2000. 
                                 La empresa se expandió hacia otros mercados con poblaciones
                                 potenciales, basándose en un mercado agresivo, facilidades de pago y consolidación financiera, 
@@ -73,7 +74,7 @@
                                 En la actualidad la operación de Costa Rica se compone de más de 115  Puntos de Venta reconocidos,
                                 Los almacenes se encuentran distribuidos por todo el territorio de Costa Rica, logrando
                                 representación en las siete provincias y principales cantones del país.
-                        </h5>
+                        </h6>
                     </div>
                     <div class="col">
                         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">

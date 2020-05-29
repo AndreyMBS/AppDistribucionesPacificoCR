@@ -40,6 +40,18 @@ footer {
     margin-top: 6.5%;
 }
 
+.columnas {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+.columnaGeneral {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /*---------------------------------------------- CUSTOM LOGIN BUTTONS ----------------------------------------------------*/
 
 /*As a replacement for bootstrap buttons*/
